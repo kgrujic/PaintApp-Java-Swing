@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="466ff27d-fd34-4cfc-90c3-dbe3bff0f45e" name="Default Changelist" comment="" />
+    <list default="true" id="466ff27d-fd34-4cfc-90c3-dbe3bff0f45e" name="Default Changelist" comment="Adds conditionally invoke">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paint/PaintController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintController.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,29 +52,29 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="form" value="41" />
+          <entry key="form" value="42" />
           <entry key="iml" value="1" />
-          <entry key="java" value="282" />
+          <entry key="java" value="283" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="GUI_DESIGNER_FORM" value="41" />
+          <entry key="GUI_DESIGNER_FORM" value="42" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="282" />
+          <entry key="JAVA" value="283" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="36" />
-          <entry key="java" value="17330" />
-          <entry key="txt" value="4" />
+          <entry key="java" value="17661" />
+          <entry key="txt" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="17330" />
-          <entry key="PLAIN_TEXT" value="40" />
+          <entry key="JAVA" value="17661" />
+          <entry key="PLAIN_TEXT" value="65" />
         </counts>
       </usages-collector>
     </session>
@@ -73,10 +84,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/paint/PaintController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1479">
-              <caret line="135" column="28" lean-forward="true" selection-start-line="135" selection-start-column="28" selection-end-line="135" selection-end-column="28" />
+            <state relative-caret-position="150">
+              <caret line="144" column="36" selection-start-line="144" selection-start-column="36" selection-end-line="144" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1366#6140#0" expanded="true" />
+                <element signature="e#6139#6140#0" expanded="true" />
+                <element signature="e#8271#8272#0" expanded="true" />
+                <element signature="e#8313#8314#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,6 +106,9 @@
         <option value="Interface" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -144,8 +162,8 @@
         <option value="$PROJECT_DIR$/src/paint/PaintView.java" />
         <option value="$PROJECT_DIR$/src/paint/Dialog.java" />
         <option value="$PROJECT_DIR$/src/paint/DialogConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/paint/PaintController.java" />
         <option value="$PROJECT_DIR$/src/paint/PaintModel.java" />
+        <option value="$PROJECT_DIR$/src/paint/PaintController.java" />
       </list>
     </option>
   </component>
@@ -161,6 +179,7 @@
     <option name="width" value="782" />
     <option name="height" value="831" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -185,6 +204,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="paint" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PaintApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PaintApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="paint" type="462c0819:PsiDirectoryNode" />
+              <item name="CircleDialog" type="e9f4de52:FormNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -195,7 +221,7 @@
   <component name="PropertiesComponent">
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="131" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="280" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542220055712" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542223661058" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propGUI" />
@@ -314,7 +340,7 @@
     <frame x="1912" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989429" visible="true" weight="0.1790831" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989429" visible="true" weight="0.1790831" />
       <window_info id="Structure" order="1" sideWeight="0.5010571" side_tool="true" weight="0.102684565" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -328,10 +354,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32884097" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32884097" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3323782" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32765958" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32884097" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32749325" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
       <window_info anchor="right" id="Palette" order="2" />
@@ -371,8 +397,38 @@
       <window_info anchor="right" id="Ant Build" order="7" weight="0.24966443" />
     </layout-to-restore>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adds conditionally invoke" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds conditionally invoke" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -493,9 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/CircleDialog.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/paint/LineDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -521,6 +574,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="61" column="79" selection-start-line="61" selection-start-column="79" selection-end-line="61" selection-end-column="79" />
+          <folding>
+            <element signature="docComment;method#$$$setupUI$$$#0;class#SquareDialog#0" />
+            <element signature="method#$$$setupUI$$$#0;class#SquareDialog#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -536,6 +593,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="68" column="45" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -550,16 +610,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="112" column="9" lean-forward="true" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/CircleDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="117" column="45" selection-start-line="117" selection-start-column="45" selection-end-line="117" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#$$$setupUI$$$#0;class#CircleDialog#0" />
           </folding>
         </state>
       </provider>
@@ -600,12 +652,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintController.java">
+    <entry file="file://$PROJECT_DIR$/src/paint/CircleDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="135" column="28" lean-forward="true" selection-start-line="135" selection-start-column="28" selection-end-line="135" selection-end-column="28" />
+        <state relative-caret-position="-451">
+          <caret line="117" column="45" selection-start-line="117" selection-start-column="45" selection-end-line="117" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="initializer##0;class#CircleDialog#0" expanded="true" />
+            <element signature="docComment;method#$$$setupUI$$$#0;class#CircleDialog#0" />
+            <element signature="method#$$$setupUI$$$#0;class#CircleDialog#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/CircleDialog.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/PaintController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="144" column="36" selection-start-line="144" selection-start-column="36" selection-end-line="144" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1366#6140#0" expanded="true" />
+            <element signature="e#6139#6140#0" expanded="true" />
+            <element signature="e#8271#8272#0" expanded="true" />
+            <element signature="e#8313#8314#0" expanded="true" />
           </folding>
         </state>
       </provider>

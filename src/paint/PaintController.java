@@ -46,7 +46,21 @@ public class PaintController {
 
     }
 
+    interface Conditionally<F> {
+        void invoke(boolean c, F f);
+    }
+
+    interface SideEffect {
+        void invoke();
+    }
+
     private void click() {
+
+        Conditionally<SideEffect> conditionally = (c, f) -> {
+            if (c) {
+                f.invoke();
+            }
+        };
 
         paintView.addMouseListener(new MouseAdapter() {
             @Override
@@ -54,12 +68,12 @@ public class PaintController {
 
                 Point upLeft = new Point(e.getX(),e.getY());
 
-                if(rbtnSelect.isSelected()){
+                conditionally.invoke(rbtnSelect.isSelected(), () -> {
                     clickPoint = upLeft;
                     paintModel.selectShape(paintModel.getSelectedShape(clickPoint));
                     paintView.repaint();
-                }
-                else if(rbtnSquare.isSelected()){
+                });
+                conditionally.invoke(rbtnSquare.isSelected(), () -> {
                     SquareDialog dialog = new SquareDialog();
                     Square s = new Square(upLeft,dialog.getSideLength(),activeOutlineColor,activeInsideColor);
 
@@ -67,9 +81,9 @@ public class PaintController {
                         paintModel.add(s);
                         paintView.repaint();
                     }
+                });
 
-                }
-                else if(rbtnCircle.isSelected()){
+                conditionally.invoke(rbtnCircle.isSelected(), () -> {
                     CircleDialog dialog = new CircleDialog();
                     Circle c = new Circle(upLeft,dialog.getRadius(),activeOutlineColor,activeInsideColor);
 
@@ -77,35 +91,37 @@ public class PaintController {
                         paintModel.add(c);
                         paintView.repaint();
                     }
-
-                }else if(rbtnRectangle.isSelected()){
+                });
+                conditionally.invoke(rbtnRectangle.isSelected(), () -> {
                     RectangleDialog dialog = new RectangleDialog();
                     Rectangle r = new Rectangle(upLeft,dialog.getRHeight(),dialog.getRWidth(),activeOutlineColor,activeInsideColor);
+
                     if (dialog.isReadyToAdd()){
-                    paintModel.add(r);
-                    paintView.repaint();
+                        paintModel.add(r);
+                        paintView.repaint();
                     }
-                } else if(rbtnLine.isSelected()){
-                        if(lineStartPoint == null){
-                            lineStartPoint = upLeft;
-                        }
-                        else {
-                            lineEndPoint = upLeft;
+                });
+                conditionally.invoke(rbtnLine.isSelected(), () -> {
+                    if(lineStartPoint == null){
+                        lineStartPoint = upLeft;
+                    }
+                    else {
+                        lineEndPoint = upLeft;
 
-                            Line l = new Line(lineStartPoint,lineEndPoint,activeOutlineColor);
-                            paintModel.add(l);
-                            paintView.repaint();
+                        Line l = new Line(lineStartPoint,lineEndPoint,activeOutlineColor);
+                        paintModel.add(l);
+                        paintView.repaint();
 
-                            lineStartPoint = null;
-                        }
-
-                }
-                else if(rbtnPoint.isSelected()){
+                        lineStartPoint = null;
+                    }
+                });
+                conditionally.invoke(rbtnPoint.isSelected(), () -> {
                     Point p = upLeft;
                     p.setOutlineColor(activeOutlineColor);
                     paintModel.add(p);
                     paintView.repaint();
-                }
+                });
+
             }
         });
 
