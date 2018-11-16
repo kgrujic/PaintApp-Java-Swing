@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="466ff27d-fd34-4cfc-90c3-dbe3bff0f45e" name="Default Changelist" comment="Adds conditionally invoke">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="466ff27d-fd34-4cfc-90c3-dbe3bff0f45e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/PaintController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paint/PaintForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paint/PaintModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paint/PaintView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paint/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/Runner.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,7 +25,7 @@
     <session id="462748000">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="19" />
+          <entry key="project.closed" value="20" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.15" value="1" />
@@ -40,58 +36,116 @@
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.31" value="3" />
-          <entry key="project.open.time.32" value="2" />
+          <entry key="project.open.time.32" value="3" />
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.34" value="2" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="24" />
+          <entry key="project.opened" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="form" value="42" />
+          <entry key="form" value="43" />
           <entry key="iml" value="1" />
-          <entry key="java" value="283" />
+          <entry key="java" value="287" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="GUI_DESIGNER_FORM" value="42" />
+          <entry key="GUI_DESIGNER_FORM" value="43" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="283" />
+          <entry key="JAVA" value="287" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="36" />
-          <entry key="java" value="17661" />
+          <entry key="java" value="17974" />
           <entry key="txt" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="17661" />
+          <entry key="JAVA" value="17974" />
           <entry key="PLAIN_TEXT" value="65" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/paint/PaintController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="144" column="36" selection-start-line="144" selection-start-column="36" selection-end-line="144" selection-end-column="36" />
+            <state relative-caret-position="280">
+              <caret line="162" column="57" lean-forward="true" selection-start-line="162" selection-start-column="57" selection-end-line="162" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1366#6140#0" expanded="true" />
-                <element signature="e#6139#6140#0" expanded="true" />
-                <element signature="e#8271#8272#0" expanded="true" />
-                <element signature="e#8313#8314#0" expanded="true" />
+                <element signature="e#1667#4429#0" expanded="true" />
+                <element signature="e#4428#4429#0" expanded="true" />
+                <element signature="e#6418#6419#0" expanded="true" />
+                <element signature="e#6460#6461#0" expanded="true" />
+                <element signature="e#7102#7103#0" expanded="true" />
+                <element signature="e#7134#7135#0" expanded="true" />
+                <element signature="e#7187#7188#0" expanded="true" />
+                <element signature="e#7229#7230#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/paint/PaintModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="48" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#225#226#0" expanded="true" />
+                <element signature="e#272#273#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/paint/Runner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/paint/PaintForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="29" column="39" lean-forward="true" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+              <folding>
+                <element signature="e#2695#2696#0" expanded="true" />
+                <element signature="e#2733#2734#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/paint/PaintForm.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/paint/PaintView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+              <folding>
+                <element signature="e#510#511#0" expanded="true" />
+                <element signature="e#546#547#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,14 +184,12 @@
         <option value="$PROJECT_DIR$/src/com/intellij/uiDesigner/core/GridConstraints.java" />
         <option value="$PROJECT_DIR$/src/paint/Test.form" />
         <option value="$PROJECT_DIR$/src/paint/BtnListener.java" />
-        <option value="$PROJECT_DIR$/src/paint/Runner.java" />
         <option value="$PROJECT_DIR$/src/paint/test.java" />
         <option value="$PROJECT_DIR$/src/paint/test.form" />
         <option value="$PROJECT_DIR$/src/paint/AddCircleDialog.form" />
         <option value="$PROJECT_DIR$/src/paint/AddCircleDialog.java" />
         <option value="$PROJECT_DIR$/src/paint/CircleDialogs.java" />
         <option value="$PROJECT_DIR$/src/geometry/AreaShape.java" />
-        <option value="$PROJECT_DIR$/src/paint/PaintForm.java" />
         <option value="$PROJECT_DIR$/src/paint/CircleDialog.form" />
         <option value="$PROJECT_DIR$/src/paint/LineDialog.form" />
         <option value="$PROJECT_DIR$/src/paint/PointDialog.form" />
@@ -159,10 +211,12 @@
         <option value="$PROJECT_DIR$/src/paint/RectangleDialog.java" />
         <option value="$PROJECT_DIR$/src/paint/SquareDialog.java" />
         <option value="$PROJECT_DIR$/src/paint/IPaintView.java" />
-        <option value="$PROJECT_DIR$/src/paint/PaintView.java" />
         <option value="$PROJECT_DIR$/src/paint/Dialog.java" />
         <option value="$PROJECT_DIR$/src/paint/DialogConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/paint/PaintView.java" />
         <option value="$PROJECT_DIR$/src/paint/PaintModel.java" />
+        <option value="$PROJECT_DIR$/src/paint/PaintForm.java" />
+        <option value="$PROJECT_DIR$/src/paint/Runner.java" />
         <option value="$PROJECT_DIR$/src/paint/PaintController.java" />
       </list>
     </option>
@@ -174,8 +228,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2069" />
-    <option name="y" value="58" />
+    <option name="x" value="2606" />
+    <option name="y" value="5" />
     <option name="width" value="782" />
     <option name="height" value="831" />
   </component>
@@ -209,7 +263,7 @@
               <item name="PaintApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="paint" type="462c0819:PsiDirectoryNode" />
-              <item name="CircleDialog" type="e9f4de52:FormNode" />
+              <item name="PaintForm" type="e9f4de52:FormNode" />
             </path>
           </expand>
           <select />
@@ -221,7 +275,7 @@
   <component name="PropertiesComponent">
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="131" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="280" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542223661058" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542382314194" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propGUI" />
@@ -325,6 +379,14 @@
       <option name="presentableId" value="Default" />
       <updated>1539955960849</updated>
     </task>
+    <task id="LOCAL-00001" summary="Adds conditionally invoke">
+      <created>1542223720022</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1542223720022</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -340,7 +402,7 @@
     <frame x="1912" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989429" visible="true" weight="0.1790831" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989429" visible="true" weight="0.1812321" />
       <window_info id="Structure" order="1" sideWeight="0.5010571" side_tool="true" weight="0.102684565" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -349,7 +411,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32884097" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32884097" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -357,7 +419,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32884097" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3323782" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32884097" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32749325" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32749325" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
       <window_info anchor="right" id="Palette" order="2" />
@@ -510,9 +572,6 @@
     <entry file="file://$PROJECT_DIR$/src/paint/SquareDialog.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintForm.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/paint/IDialog.java" />
     <entry file="jar://C:/Program Files/Java/jdk-11/lib/src.zip!/java.base/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -581,13 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/Runner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/paint/IPaintView.java" />
     <entry file="file://$PROJECT_DIR$/src/paint/Dialog.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -616,35 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="64" column="8" lean-forward="true" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#225#226#0" expanded="true" />
-            <element signature="e#272#273#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="123" column="41" selection-start-line="123" selection-start-column="41" selection-end-line="123" selection-end-column="41" />
-          <folding>
-            <element signature="e#2733#2734#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/paint/DialogConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -668,16 +691,64 @@
     <entry file="file://$PROJECT_DIR$/src/paint/CircleDialog.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintController.java">
+    <entry file="file://$PROJECT_DIR$/src/paint/PaintForm.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/PaintView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="144" column="36" selection-start-line="144" selection-start-column="36" selection-end-line="144" selection-end-column="36" />
+        <state relative-caret-position="238">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#546#547#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/PaintForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="29" column="39" lean-forward="true" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+          <folding>
+            <element signature="e#2695#2696#0" expanded="true" />
+            <element signature="e#2733#2734#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/PaintModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="48" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1366#6140#0" expanded="true" />
-            <element signature="e#6139#6140#0" expanded="true" />
-            <element signature="e#8271#8272#0" expanded="true" />
-            <element signature="e#8313#8314#0" expanded="true" />
+            <element signature="e#225#226#0" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/PaintController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="162" column="57" lean-forward="true" selection-start-line="162" selection-start-column="57" selection-end-line="162" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1667#4429#0" expanded="true" />
+            <element signature="e#4428#4429#0" expanded="true" />
+            <element signature="e#6418#6419#0" expanded="true" />
+            <element signature="e#6460#6461#0" expanded="true" />
+            <element signature="e#7102#7103#0" expanded="true" />
+            <element signature="e#7134#7135#0" expanded="true" />
+            <element signature="e#7187#7188#0" expanded="true" />
+            <element signature="e#7229#7230#0" expanded="true" />
           </folding>
         </state>
       </provider>

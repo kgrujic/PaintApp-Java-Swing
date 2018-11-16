@@ -2,6 +2,8 @@ package paint;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class PaintForm extends JFrame {
     private JPanel mainPanel;
@@ -26,9 +28,11 @@ public class PaintForm extends JFrame {
 
         $$$setupUI$$$();
         paint = (PaintView) paintPanel;
+
         setSize(700, 700);
         setContentPane(mainPanel);
         setLocationRelativeTo(null);
+
     }
 
     public PaintView getPaint() {

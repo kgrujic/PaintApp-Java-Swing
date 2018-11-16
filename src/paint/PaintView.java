@@ -21,8 +21,6 @@ public class PaintView extends JPanel  {
         }
     }
 
-
-
     public void setShapes(ArrayList<Shape> shapes) {
         this.shapes = shapes;
     }

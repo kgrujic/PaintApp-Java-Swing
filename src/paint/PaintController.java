@@ -11,7 +11,7 @@ import java.awt.event.*;
 
 public class PaintController {
 
-    private PaintForm paintForm;
+
     private JRadioButton rbtnPoint;
     private JRadioButton rbtnLine;
     private JRadioButton rbtnRectangle;
@@ -29,6 +29,7 @@ public class PaintController {
     private Point lineEndPoint;
     private Point clickPoint;
 
+    private PaintForm paintForm;
     private PaintView paintView;
     private PaintModel paintModel;
 
@@ -38,8 +39,12 @@ public class PaintController {
 
 
 
+    public PaintController(PaintForm paintForm, PaintModel paintModel) {
+        this.paintForm = paintForm;
+        this.paintModel = paintModel;
 
-    public PaintController() {
+        setPaintView(paintForm.getPaint());
+        getPaintView().setShapes(paintModel.getShapes());
 
         initComponents();
         click();
@@ -53,6 +58,8 @@ public class PaintController {
     interface SideEffect {
         void invoke();
     }
+
+
 
     private void click() {
 
@@ -70,7 +77,8 @@ public class PaintController {
 
                 conditionally.invoke(rbtnSelect.isSelected(), () -> {
                     clickPoint = upLeft;
-                    paintModel.selectShape(paintModel.getSelectedShape(clickPoint));
+                    Shape selectedShape = paintModel.getSelectedShape(clickPoint);
+                    paintModel.selectShape(selectedShape);
                     paintView.repaint();
                 });
                 conditionally.invoke(rbtnSquare.isSelected(), () -> {
@@ -150,6 +158,7 @@ public class PaintController {
                     if (shapeToDelete == null) {
                         JOptionPane.showMessageDialog(paintForm, "Please select shape first");
                     } else {
+
                         paintModel.remove(shapeToDelete);
                         paintView.repaint();
                         clickPoint = new Point(0,0);
@@ -190,13 +199,6 @@ public class PaintController {
 
     private void initComponents() {
 
-        paintForm = new PaintForm();
-
-        paintModel = new PaintModel();
-
-        paintView = paintForm.getPaint();
-        paintView.setShapes(paintModel.getShapes());
-
 
         rbtnPoint = paintForm.getRbtnPoint();
         rbtnLine = paintForm.getRbtnLine();
@@ -216,6 +218,11 @@ public class PaintController {
     }
 
 
+    public PaintView getPaintView() {
+        return paintView;
+    }
 
-
+    public void setPaintView(PaintView paintView) {
+        this.paintView = paintView;
+    }
 }

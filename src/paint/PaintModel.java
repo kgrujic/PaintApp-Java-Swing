@@ -18,7 +18,6 @@ public class PaintModel {
         Shapes = new ArrayList<Shape>();
     }
 
-
     public void add(Shape newShape) {
         Shapes.add(newShape);
     }
@@ -34,6 +33,9 @@ public class PaintModel {
         Shapes.removeAll(shapesToRemove);
     }
 
+    public ArrayList<Shape> getShapes(){
+        return Shapes;
+    }
 
     public void update(Shape shapeToUpdate,Object... properties){
         shapeToUpdate.update(properties);
@@ -86,7 +88,5 @@ public class PaintModel {
        return newColor;
    }
 
-    public ArrayList<Shape> getShapes(){
-        return Shapes;
-    }
+
 }

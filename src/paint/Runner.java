@@ -2,7 +2,11 @@ package paint;
 
 public class Runner {
     public static void main(String[] args){
-        PaintController paintController = new PaintController();
+
+        PaintModel paintModel = new PaintModel();
+        PaintForm paintForm = new PaintForm();
+        PaintController paintController = new PaintController(paintForm, paintModel);
+
         paintController.showMainFrame();
 
     }
