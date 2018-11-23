@@ -1,7 +1,7 @@
 package geometry;
 
-import paint.PaintModel;
-import paint.RectangleDialog;
+import paint.mvc.PaintModel;
+import paint.dialogs.RectangleDialog;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,7 +1,7 @@
 package geometry;
 
-import paint.PaintModel;
-import paint.SquareDialog;
+import paint.mvc.PaintModel;
+import paint.dialogs.SquareDialog;
 
 import javax.swing.*;
 import java.awt.*;

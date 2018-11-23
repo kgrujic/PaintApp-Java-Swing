@@ -1,7 +1,7 @@
 package geometry;
 
-import paint.PaintModel;
-import paint.PointDialog;
+import paint.mvc.PaintModel;
+import paint.dialogs.PointDialog;
 
 import javax.swing.*;
 import java.awt.Color;

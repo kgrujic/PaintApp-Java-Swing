@@ -1,6 +1,6 @@
 package geometry;
 
-import paint.PaintModel;
+import paint.mvc.PaintModel;
 
 import javax.swing.*;
 import java.awt.Color;

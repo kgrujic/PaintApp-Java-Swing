@@ -1,7 +1,7 @@
 package geometry;
 
-import paint.CircleDialog;
-import paint.PaintModel;
+import paint.dialogs.CircleDialog;
+import paint.mvc.PaintModel;
 
 import javax.swing.*;
 import java.awt.*;
