@@ -104,6 +104,8 @@ public class Circle extends AreaShape implements IMovable{
         return (T) crcDialog;
     }
 
+
+
     @Override
     public void update(Shape newShape) {
             Circle tmpCircle = (Circle) newShape;
@@ -111,7 +113,17 @@ public class Circle extends AreaShape implements IMovable{
             this.setR(tmpCircle.getR());
             this.setInsideColor(tmpCircle.getInsideColor());
             this.setOutlineColor(tmpCircle.getOutlineColor());
+    }
 
+    @Override
+    public Shape cloneInstance() {
+        Circle originalCircle = new Circle();
+        originalCircle.setCenter(this.getCenter());
+        originalCircle.setR(this.getR());
+        originalCircle.setInsideColor(this.getInsideColor());
+        originalCircle.setOutlineColor(this.getOutlineColor());
+
+        return originalCircle;
     }
 
     @Override

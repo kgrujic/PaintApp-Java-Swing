@@ -29,6 +29,8 @@ public class PaintController {
     private JButton btnOutlineColor;
     private JButton btnInsideColor;
 
+    private JButton btnUndo;
+    private JButton btnRedo;
 
     private Point lineStartPoint;
     private Point lineEndPoint;
@@ -42,6 +44,7 @@ public class PaintController {
     private final boolean isUpdate = true;
     private Color activeOutlineColor = Color.black;
     private Color activeInsideColor = Color.white;
+
 
 
 
@@ -81,11 +84,13 @@ public class PaintController {
             public void mousePressed(MouseEvent e) {
 
                 Point upLeft = new Point(e.getX(),e.getY());
+                paintModel.deselectAllShapes();
+
 
                 conditionally.invoke(rbtnSelect.isSelected(), () -> {
                     clickPoint = upLeft;
                     Shape selectedShape = paintModel.getSelectedShape(clickPoint);
-                   // paintModel.selectShape(selectedShape);
+                   //paintModel.selectShape(selectedShape);
                     CmdSelectShape cmdSelectShape = new CmdSelectShape(paintModel,selectedShape);
                     cmdSelectShape.execute();
                     AddCommand(cmdSelectShape);
@@ -220,6 +225,36 @@ public class PaintController {
                 activeInsideColor = paintModel.dialogSetInsideColor(btnInsideColor);
             }
         });
+
+        btnUndo.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(commandListRepository.getIndex() != 0) {
+                    commandListRepository.getCurrentCommand().unexecute();
+                    commandListRepository.DecrementIndex();
+
+                    paintView.repaint();
+                }
+                else
+                    btnUndo.setEnabled(false);
+
+
+            }
+        });
+
+        btnRedo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(commandListRepository.getIndex() != commandListRepository.getAllCommands().size() -1) {
+                    commandListRepository.IncrementIndex();
+                    commandListRepository.getCurrentCommand().execute();
+                    paintView.repaint();
+                }
+                else
+                    btnRedo.setEnabled(false);
+            }
+        });
     }
 
     public void AddCommand(ICommand command){
@@ -241,10 +276,12 @@ public class PaintController {
         rbtnRectangle = paintForm.getRbtnRectangle();
         rbtnSelect = paintForm.getRbtnSelect();
 
-
         btnUpdate = paintForm.getBtnUpdate();
         btnDelete = paintForm.getBtnDelete();
         btnClearAll = paintForm.getBtnClearAll();
+
+        btnUndo = paintForm.getBtnUndo();
+        btnRedo = paintForm.getBtnRedo();
 
         btnOutlineColor = paintForm.getBtnOutlineColor();
         btnInsideColor = paintForm.getBtnInsideColor();

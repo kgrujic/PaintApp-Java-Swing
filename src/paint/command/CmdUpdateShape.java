@@ -6,22 +6,28 @@ import paint.mvc.PaintModel;
 public class CmdUpdateShape implements ICommand {
 
     private PaintModel model;
-    private Shape oldShape;
-    private Shape newShape;
+    private Shape oldState;
+    private Shape newState;
+    private Shape originalState;
+    private Shape originalNewState;
 
-    public CmdUpdateShape(PaintModel model, Shape oldShape, Shape newShape) {
+
+    public CmdUpdateShape(PaintModel model, Shape oldState, Shape newState) {
         this.model = model;
-        this.oldShape = oldShape;
-        this.newShape = newShape;
+        this.oldState = oldState;
+        this.newState = newState;
+
     }
 
     @Override
     public void execute() {
-        model.update(oldShape,newShape);
+        originalState = oldState.cloneInstance();
+        model.update(oldState, newState);
+
     }
 
     @Override
     public void unexecute() {
-        model.update(newShape,oldShape);
+        model.update(oldState, originalState);
     }
 }

@@ -21,6 +21,8 @@ public class PaintForm extends JFrame {
     private JPanel paintPanel;
     private JButton btnOutlineColor;
     private JButton btnInsideColor;
+    private JButton btnUndo;
+    private JButton btnRedo;
     private PaintView paint;
 
 
@@ -29,7 +31,7 @@ public class PaintForm extends JFrame {
         $$$setupUI$$$();
         paint = (PaintView) paintPanel;
 
-        setSize(700, 700);
+        setSize(800, 800);
         setContentPane(mainPanel);
         setLocationRelativeTo(null);
 
@@ -52,6 +54,21 @@ public class PaintForm extends JFrame {
         this.paintPanel = paintPanel;
     }
 
+    public JButton getBtnUndo() {
+        return btnUndo;
+    }
+
+    public void setBtnUndo(JButton btnUndo) {
+        this.btnUndo = btnUndo;
+    }
+
+    public JButton getBtnRedo() {
+        return btnRedo;
+    }
+
+    public void setBtnRedo(JButton btnRedo) {
+        this.btnRedo = btnRedo;
+    }
 
     public JRadioButton getRbtnLine() {
         return rbtnLine;
@@ -155,23 +172,23 @@ public class PaintForm extends JFrame {
     private void $$$setupUI$$$() {
         createUIComponents();
         mainPanel = new JPanel();
-        mainPanel.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(6, 7, new Insets(0, 0, 0, 0), -1, -1));
+        mainPanel.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(6, 10, new Insets(0, 0, 0, 0), -1, -1));
         mainPanel.setBackground(new Color(-13671681));
         rbtnRectangle = new JRadioButton();
         rbtnRectangle.setBackground(new Color(-13671681));
         rbtnRectangle.setForeground(new Color(-1310730));
         rbtnRectangle.setText("Rectangle");
-        mainPanel.add(rbtnRectangle, new com.intellij.uiDesigner.core.GridConstraints(0, 4, 2, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        mainPanel.add(rbtnRectangle, new com.intellij.uiDesigner.core.GridConstraints(0, 4, 2, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         rbtnCircle = new JRadioButton();
         rbtnCircle.setBackground(new Color(-13671681));
         rbtnCircle.setForeground(new Color(-1310730));
         rbtnCircle.setText("Circle");
-        mainPanel.add(rbtnCircle, new com.intellij.uiDesigner.core.GridConstraints(0, 2, 2, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        mainPanel.add(rbtnCircle, new com.intellij.uiDesigner.core.GridConstraints(0, 2, 2, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         rbtnSquare = new JRadioButton();
         rbtnSquare.setBackground(new Color(-13671681));
         rbtnSquare.setForeground(new Color(-1310730));
         rbtnSquare.setText("Square");
-        mainPanel.add(rbtnSquare, new com.intellij.uiDesigner.core.GridConstraints(0, 3, 2, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        mainPanel.add(rbtnSquare, new com.intellij.uiDesigner.core.GridConstraints(0, 3, 2, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         btnUpdate = new JButton();
         btnUpdate.setBackground(new Color(-33641));
         btnUpdate.setForeground(new Color(-1310730));
@@ -191,19 +208,14 @@ public class PaintForm extends JFrame {
         rbtnLine.setBackground(new Color(-13671681));
         rbtnLine.setForeground(new Color(-1310730));
         rbtnLine.setText("Line");
-        mainPanel.add(rbtnLine, new com.intellij.uiDesigner.core.GridConstraints(0, 1, 2, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        mainPanel.add(rbtnLine, new com.intellij.uiDesigner.core.GridConstraints(0, 1, 2, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         btnClearAll = new JButton();
         btnClearAll.setBackground(new Color(-33641));
         btnClearAll.setForeground(new Color(-1310730));
         btnClearAll.setText("Clear all");
         mainPanel.add(btnClearAll, new com.intellij.uiDesigner.core.GridConstraints(5, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         paintPanel.setBackground(new Color(-1));
-        mainPanel.add(paintPanel, new com.intellij.uiDesigner.core.GridConstraints(2, 1, 4, 6, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
-        rbtnPoint = new JRadioButton();
-        rbtnPoint.setBackground(new Color(-13671681));
-        rbtnPoint.setForeground(new Color(-1310730));
-        rbtnPoint.setText("Point");
-        mainPanel.add(rbtnPoint, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        mainPanel.add(paintPanel, new com.intellij.uiDesigner.core.GridConstraints(2, 1, 4, 9, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         btnOutlineColor = new JButton();
         btnOutlineColor.setBackground(new Color(-16777216));
         btnOutlineColor.setForeground(new Color(-1310730));
@@ -214,6 +226,17 @@ public class PaintForm extends JFrame {
         btnInsideColor.setForeground(new Color(-16777216));
         btnInsideColor.setText("Inside Color");
         mainPanel.add(btnInsideColor, new com.intellij.uiDesigner.core.GridConstraints(0, 6, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        rbtnPoint = new JRadioButton();
+        rbtnPoint.setBackground(new Color(-13671681));
+        rbtnPoint.setForeground(new Color(-1310730));
+        rbtnPoint.setText("Point");
+        mainPanel.add(rbtnPoint, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 2, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        btnUndo = new JButton();
+        btnUndo.setText("Undo");
+        mainPanel.add(btnUndo, new com.intellij.uiDesigner.core.GridConstraints(0, 7, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        btnRedo = new JButton();
+        btnRedo.setText("Redo");
+        mainPanel.add(btnRedo, new com.intellij.uiDesigner.core.GridConstraints(0, 8, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_EAST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         ButtonGroup buttonGroup;
         buttonGroup = new ButtonGroup();
         buttonGroup.add(rbtnRectangle);

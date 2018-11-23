@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="paint.PaintForm">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="6" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="6" column-count="10" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="3" y="28" width="577" height="431"/>
+      <xy x="3" y="28" width="773" height="431"/>
     </constraints>
     <properties>
       <background color="-13671681"/>
@@ -12,7 +12,7 @@
     <children>
       <component id="bf58a" class="javax.swing.JRadioButton" binding="rbtnRectangle">
         <constraints>
-          <grid row="0" column="4" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="4" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-13671681"/>
@@ -22,7 +22,7 @@
       </component>
       <component id="c2e04" class="javax.swing.JRadioButton" binding="rbtnCircle">
         <constraints>
-          <grid row="0" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-13671681"/>
@@ -32,7 +32,7 @@
       </component>
       <component id="4596a" class="javax.swing.JRadioButton" binding="rbtnSquare">
         <constraints>
-          <grid row="0" column="3" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="3" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-13671681"/>
@@ -72,7 +72,7 @@
       </component>
       <component id="44970" class="javax.swing.JRadioButton" binding="rbtnLine">
         <constraints>
-          <grid row="0" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-13671681"/>
@@ -93,7 +93,7 @@
       <grid id="a8640" binding="paintPanel" custom-create="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="2" column="1" row-span="4" col-span="6" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="1" row-span="4" col-span="9" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-1"/>
@@ -101,16 +101,6 @@
         <border type="none"/>
         <children/>
       </grid>
-      <component id="79d" class="javax.swing.JRadioButton" binding="rbtnPoint">
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <background color="-13671681"/>
-          <foreground color="-1310730"/>
-          <text value="Point"/>
-        </properties>
-      </component>
       <component id="b15c0" class="javax.swing.JButton" binding="btnOutlineColor">
         <constraints>
           <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
@@ -129,6 +119,32 @@
           <background color="-1"/>
           <foreground color="-16777216"/>
           <text value="Inside Color"/>
+        </properties>
+      </component>
+      <component id="79d" class="javax.swing.JRadioButton" binding="rbtnPoint">
+        <constraints>
+          <grid row="0" column="0" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13671681"/>
+          <foreground color="-1310730"/>
+          <text value="Point"/>
+        </properties>
+      </component>
+      <component id="f092e" class="javax.swing.JButton" binding="btnUndo">
+        <constraints>
+          <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Undo"/>
+        </properties>
+      </component>
+      <component id="44753" class="javax.swing.JButton" binding="btnRedo">
+        <constraints>
+          <grid row="0" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Redo"/>
         </properties>
       </component>
     </children>

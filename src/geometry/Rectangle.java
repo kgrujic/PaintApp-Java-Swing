@@ -112,6 +112,9 @@ public class Rectangle extends Square {
             this.setOutlineColor(tmpRectangle.getOutlineColor());
 
     }
+    public Shape cloneInstance() {
+        return null;
+    }
 
 
     public int getSideWidth() {

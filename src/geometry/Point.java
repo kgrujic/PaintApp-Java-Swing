@@ -116,6 +116,11 @@ public class Point extends Shape implements IMovable{
 
     }
 
+    @Override
+    public Shape cloneInstance() {
+        return null;
+    }
+
 
     public int getX() {
         return x;

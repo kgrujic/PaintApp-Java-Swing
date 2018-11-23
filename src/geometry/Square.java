@@ -125,6 +125,11 @@ public class Square extends AreaShape implements IMovable {
     }
 
     @Override
+    public Shape cloneInstance() {
+        return null;
+    }
+
+    @Override
     public int compareTo(Object o) {
          if (o instanceof Square) {
              Square tmp = (Square) o;

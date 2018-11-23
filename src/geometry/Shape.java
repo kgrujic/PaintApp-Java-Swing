@@ -27,6 +27,7 @@ public abstract class Shape implements Comparable{
     public abstract boolean contains(int x,int y);
     public abstract <T extends JDialog> T createDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository);
     public abstract void update(Shape newShape);
+    public abstract Shape cloneInstance();
 
 
     public Color getOutlineColor() {

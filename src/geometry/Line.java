@@ -120,6 +120,11 @@ public class Line extends Shape{
 
     }
 
+    @Override
+    public Shape cloneInstance() {
+        return null;
+    }
+
 
     public Point getStartPoint() {
         return startPoint;
