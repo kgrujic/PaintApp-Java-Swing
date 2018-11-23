@@ -4,10 +4,7 @@ import geometry.*;
 import geometry.Point;
 import geometry.Rectangle;
 import geometry.Shape;
-import paint.command.CmdAddShape;
-import paint.command.CmdRemoveAllShapes;
-import paint.command.CmdRemoveShape;
-import paint.command.CmdSelectShape;
+import paint.command.*;
 import paint.dialogs.CircleDialog;
 import paint.PaintForm;
 import paint.dialogs.RectangleDialog;
@@ -40,6 +37,7 @@ public class PaintController {
     private PaintForm paintForm;
     private PaintView paintView;
     private PaintModel paintModel;
+    private CommandListRepository commandListRepository;
 
     private final boolean isUpdate = true;
     private Color activeOutlineColor = Color.black;
@@ -50,6 +48,7 @@ public class PaintController {
     public PaintController(PaintForm paintForm, PaintModel paintModel) {
         this.paintForm = paintForm;
         this.paintModel = paintModel;
+        this.commandListRepository = new CommandListRepository();
 
         setPaintView(paintForm.getPaint());
         getPaintView().setShapes(paintModel.getShapes());
@@ -89,6 +88,7 @@ public class PaintController {
                    // paintModel.selectShape(selectedShape);
                     CmdSelectShape cmdSelectShape = new CmdSelectShape(paintModel,selectedShape);
                     cmdSelectShape.execute();
+                    AddCommand(cmdSelectShape);
                     paintView.repaint();
                 });
                 conditionally.invoke(rbtnSquare.isSelected(), () -> {
@@ -99,6 +99,7 @@ public class PaintController {
                         //paintModel.add(s);
                         CmdAddShape cmdAddSquare = new CmdAddShape(paintModel,s);
                         cmdAddSquare.execute();
+                        AddCommand(cmdAddSquare);
                         paintView.repaint();
                     }
                 });
@@ -111,6 +112,7 @@ public class PaintController {
                        // paintModel.add(c);
                         CmdAddShape cmdAddCircle = new CmdAddShape(paintModel,c);
                         cmdAddCircle.execute();
+                        AddCommand(cmdAddCircle);
                         paintView.repaint();
                     }
                 });
@@ -122,6 +124,7 @@ public class PaintController {
                        // paintModel.add(r);
                         CmdAddShape cmdAddRectangle = new CmdAddShape(paintModel,r);
                         cmdAddRectangle.execute();
+                        AddCommand(cmdAddRectangle);
                         paintView.repaint();
                     }
                 });
@@ -136,6 +139,7 @@ public class PaintController {
                        // paintModel.add(l);
                         CmdAddShape cmdAddLine = new CmdAddShape(paintModel,l);
                         cmdAddLine.execute();
+                        AddCommand(cmdAddLine);
                         paintView.repaint();
 
                         lineStartPoint = null;
@@ -147,6 +151,7 @@ public class PaintController {
                     //paintModel.add(p);
                     CmdAddShape cmdAddPoint = new CmdAddShape(paintModel,p);
                     cmdAddPoint.execute();
+                    AddCommand(cmdAddPoint);
                     paintView.repaint();
                 });
 
@@ -161,7 +166,7 @@ public class PaintController {
                     if (oldShape == null) {
                         JOptionPane.showMessageDialog(paintForm, "Please select shape first");
                     } else {
-                        oldShape.createDialog(isUpdate, oldShape, paintModel);
+                        oldShape.createDialog(isUpdate, oldShape, paintModel,commandListRepository);
                         paintView.repaint();
                         clickPoint = new Point(0,0);
                     }
@@ -182,6 +187,7 @@ public class PaintController {
                         //paintModel.remove(shapeToDelete);
                         CmdRemoveShape cmdRemoveShape = new CmdRemoveShape(paintModel,shapeToDelete);
                         cmdRemoveShape.execute();
+                        AddCommand(cmdRemoveShape);
                         paintView.repaint();
                         clickPoint = new Point(0,0);
                     }
@@ -195,6 +201,7 @@ public class PaintController {
                 //paintModel.removeAllShapes();
                 CmdRemoveAllShapes cmdRemoveAllShapes = new CmdRemoveAllShapes(paintModel);
                 cmdRemoveAllShapes.execute();
+                AddCommand(cmdRemoveAllShapes);
                 paintView.repaint();
             }
         });
@@ -215,6 +222,9 @@ public class PaintController {
         });
     }
 
+    public void AddCommand(ICommand command){
+        commandListRepository.addCommand(command);
+    }
 
     public void showMainFrame(){
         paintForm.setVisible(true);

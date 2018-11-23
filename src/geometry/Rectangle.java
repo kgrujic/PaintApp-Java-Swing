@@ -1,5 +1,6 @@
 package geometry;
 
+import paint.command.CommandListRepository;
 import paint.mvc.PaintModel;
 import paint.dialogs.RectangleDialog;
 
@@ -96,8 +97,8 @@ public class Rectangle extends Square {
     }
 
     @Override
-    public <T extends JDialog> T createDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel) {
-        RectangleDialog rectDialog = new RectangleDialog(isUpdate,oldShape, paintModel);
+    public <T extends JDialog> T createDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
+        RectangleDialog rectDialog = new RectangleDialog(isUpdate,oldShape, paintModel,commandListRepository);
         return (T) rectDialog;
     }
 

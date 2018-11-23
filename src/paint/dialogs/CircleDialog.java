@@ -4,6 +4,7 @@ import geometry.Circle;
 import geometry.Shape;
 import geometry.Point;
 import paint.command.CmdUpdateShape;
+import paint.command.CommandListRepository;
 import paint.mvc.PaintModel;
 
 import javax.swing.*;
@@ -69,9 +70,10 @@ public class CircleDialog extends Dialog {
 
     }
 
-    public CircleDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel) {
+    public CircleDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
 
         setArgumentsForUpdate(isUpdate, oldShape, paintModel);
+        setCommandListRepository(commandListRepository);
 
         oldCircle = (Circle) oldShape;
 

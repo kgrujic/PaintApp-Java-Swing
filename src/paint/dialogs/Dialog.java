@@ -2,6 +2,7 @@ package paint.dialogs;
 
 import geometry.Shape;
 import paint.command.CmdUpdateShape;
+import paint.command.CommandListRepository;
 import paint.mvc.PaintModel;
 
 import javax.swing.*;
@@ -24,6 +25,9 @@ public abstract class Dialog extends JDialog {
     // Create
     protected boolean readyToAdd;
 
+    // Command
+    private CommandListRepository commandListRepository;
+
     public abstract void setFieldsValuesForUpdate(Shape tmpShape);
 
     public abstract void setVisibilityToFalse();
@@ -33,6 +37,10 @@ public abstract class Dialog extends JDialog {
         this.isUpdate = isUpdate;
         this.oldShape = oldShape;
         this.paintModel = model;
+    }
+
+    public void setCommandListRepository(CommandListRepository commandListRepository){
+        this.commandListRepository = commandListRepository;
     }
 
     public void setupContentPane(JPanel contentPane, JButton buttonOK) {
@@ -50,6 +58,8 @@ public abstract class Dialog extends JDialog {
     public void Update(Shape oldShape,Shape newShape){
         CmdUpdateShape cmdUpdateShape = new CmdUpdateShape(paintModel, oldShape, newShape);
         cmdUpdateShape.execute();
+        commandListRepository.addCommand(cmdUpdateShape);
+
     }
 
     public void setupColorButtonsListeners(JButton btnOutlineColor, JButton btnInsideColor){

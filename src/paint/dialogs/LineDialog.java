@@ -3,6 +3,7 @@ package paint.dialogs;
 import geometry.Line;
 import geometry.Point;
 import geometry.Shape;
+import paint.command.CommandListRepository;
 import paint.mvc.PaintModel;
 
 import javax.swing.*;
@@ -30,9 +31,10 @@ public class LineDialog extends Dialog {
 
     }
 
-    public LineDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel) {
+    public LineDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
 
         setArgumentsForUpdate(isUpdate, oldShape, paintModel);
+        setCommandListRepository(commandListRepository);
 
         oldLine = (Line) oldShape;
 

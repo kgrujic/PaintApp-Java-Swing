@@ -1,5 +1,6 @@
 package geometry;
 
+import paint.command.CommandListRepository;
 import paint.mvc.PaintModel;
 
 import javax.swing.*;
@@ -24,7 +25,7 @@ public abstract class Shape implements Comparable{
     public abstract void draw(Graphics g);
     public abstract void selected(Graphics g);
     public abstract boolean contains(int x,int y);
-    public abstract <T extends JDialog> T createDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel);
+    public abstract <T extends JDialog> T createDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository);
     public abstract void update(Shape newShape);
 
 

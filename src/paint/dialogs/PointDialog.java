@@ -2,6 +2,7 @@ package paint.dialogs;
 
 import geometry.Point;
 import geometry.Shape;
+import paint.command.CommandListRepository;
 import paint.mvc.PaintModel;
 
 import javax.swing.*;
@@ -25,8 +26,9 @@ public class PointDialog extends Dialog {
     public PointDialog() {
     }
 
-    public PointDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel) {
+    public PointDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
         setArgumentsForUpdate(isUpdate, oldShape, paintModel);
+        setCommandListRepository(commandListRepository);
 
         // Point oldPoint = (Point) oldShape;
         oldPoint = (Point) oldShape;

@@ -3,6 +3,7 @@ package paint.dialogs;
 import geometry.Point;
 import geometry.Rectangle;
 import geometry.Shape;
+import paint.command.CommandListRepository;
 import paint.mvc.PaintModel;
 
 import javax.swing.*;
@@ -65,9 +66,10 @@ public class RectangleDialog extends Dialog {
         setupDialog(dialogConfiguration);
     }
 
-    public RectangleDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel) {
+    public RectangleDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
 
         setArgumentsForUpdate(isUpdate, oldShape, paintModel);
+        setCommandListRepository(commandListRepository);
 
         oldRectangle = (Rectangle) oldShape;
 

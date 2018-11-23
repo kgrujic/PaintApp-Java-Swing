@@ -1,5 +1,6 @@
 package geometry;
 
+import paint.command.CommandListRepository;
 import paint.mvc.PaintModel;
 import paint.dialogs.PointDialog;
 
@@ -101,8 +102,8 @@ public class Point extends Shape implements IMovable{
     }
 
     @Override
-    public <T extends JDialog> T createDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel) {
-        PointDialog pointDialog = new PointDialog(isUpdate,oldShape, paintModel);
+    public <T extends JDialog> T createDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
+        PointDialog pointDialog = new PointDialog(isUpdate,oldShape, paintModel,commandListRepository);
         return (T) pointDialog;
     }
 

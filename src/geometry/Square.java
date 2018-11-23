@@ -1,5 +1,6 @@
 package geometry;
 
+import paint.command.CommandListRepository;
 import paint.mvc.PaintModel;
 import paint.dialogs.SquareDialog;
 
@@ -107,8 +108,8 @@ public class Square extends AreaShape implements IMovable {
     }
 
     @Override
-    public <T extends JDialog> T createDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel) {
-        SquareDialog sqrDialog = new SquareDialog(isUpdate,oldShape, paintModel);
+    public <T extends JDialog> T createDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
+        SquareDialog sqrDialog = new SquareDialog(isUpdate,oldShape, paintModel,commandListRepository);
         return (T) sqrDialog;
 
     }

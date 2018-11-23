@@ -1,5 +1,6 @@
 package geometry;
 
+import paint.command.CommandListRepository;
 import paint.dialogs.CircleDialog;
 import paint.mvc.PaintModel;
 
@@ -98,8 +99,8 @@ public class Circle extends AreaShape implements IMovable{
     }
 
     @Override
-    public <T extends JDialog> T createDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel) {
-        CircleDialog crcDialog = new CircleDialog(isUpdate,oldShape, paintModel);
+    public <T extends JDialog> T createDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
+        CircleDialog crcDialog = new CircleDialog(isUpdate,oldShape, paintModel, commandListRepository);
         return (T) crcDialog;
     }
 

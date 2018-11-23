@@ -3,6 +3,7 @@ package paint.dialogs;
 import geometry.Point;
 import geometry.Shape;
 import geometry.Square;
+import paint.command.CommandListRepository;
 import paint.mvc.PaintModel;
 
 import javax.swing.*;
@@ -61,9 +62,10 @@ public class SquareDialog extends Dialog {
         setupDialog(dialogConfiguration);
     }
 
-    public SquareDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel) {
+    public SquareDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
 
         setArgumentsForUpdate(isUpdate, oldShape, paintModel);
+        setCommandListRepository(commandListRepository);
 
         oldSquare = (Square) oldShape;
 

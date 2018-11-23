@@ -1,5 +1,6 @@
 package geometry;
 
+import paint.command.CommandListRepository;
 import paint.dialogs.LineDialog;
 import paint.mvc.PaintModel;
 
@@ -104,8 +105,8 @@ public class Line extends Shape{
     }
 
     @Override
-    public <T extends JDialog> T createDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel) {
-        LineDialog lineDialog = new LineDialog(isUpdate,oldShape, paintModel);
+    public <T extends JDialog> T createDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
+        LineDialog lineDialog = new LineDialog(isUpdate,oldShape, paintModel,commandListRepository);
         return (T) lineDialog;
     }
 
