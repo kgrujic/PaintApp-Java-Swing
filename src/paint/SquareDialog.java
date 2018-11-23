@@ -22,7 +22,8 @@ public class SquareDialog extends Dialog {
     private JButton btnInsideColor;
 
     private int sideLength;
-    private Square tmpSquare;
+    private Square oldSquare;
+    private Square newSquare;
 
 
     public SquareDialog() {
@@ -63,11 +64,11 @@ public class SquareDialog extends Dialog {
 
         setArgumentsForUpdate(isUpdate, oldShape, paintModel);
 
-        tmpSquare = (Square) oldShape;
+        oldSquare = (Square) oldShape;
 
         if (isUpdate) {
             setupContentPane(contentPane, buttonOK);
-            setFieldsValuesForUpdate(tmpSquare);
+            setFieldsValuesForUpdate(oldSquare);
             setupColorButtonsListeners(btnOutlineColor, btnInsideColor);
 
 
@@ -131,8 +132,9 @@ public class SquareDialog extends Dialog {
         // add your code here
         if (isUpdate) {
 
-            paintModel.update(tmpSquare, new Point(Integer.parseInt(txtboxULX.getText()), Integer.parseInt(txtboxULY.getText())),
+            newSquare = new Square(new Point(Integer.parseInt(txtboxULX.getText()), Integer.parseInt(txtboxULY.getText())),
                     Integer.parseInt(txtboxSideLength.getText()), insideColor, outlineColor);
+            paintModel.update(oldSquare, newSquare);
 
         } else {
             sideLength = Integer.parseInt(txtboxSideLength.getText());

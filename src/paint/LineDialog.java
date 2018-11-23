@@ -21,7 +21,8 @@ public class LineDialog extends Dialog {
     private JLabel lblEndPointX;
     private JLabel lblEndPointY;
     private JButton btnOutlineColor;
-    private Line tmpLine;
+    private Line oldLine;
+    private Line newLine;
 
 
     public LineDialog() {
@@ -32,11 +33,11 @@ public class LineDialog extends Dialog {
 
         setArgumentsForUpdate(isUpdate, oldShape, paintModel);
 
-        tmpLine = (Line) oldShape;
+        oldLine = (Line) oldShape;
 
         setupContentPane(contentPane, buttonOK);
 
-        setFieldsValuesForUpdate(tmpLine);
+        setFieldsValuesForUpdate(oldLine);
 
         setupColorButtonsListeners(btnOutlineColor, null);
 
@@ -90,9 +91,10 @@ public class LineDialog extends Dialog {
 
     private void onOK() {
         // add your code here
-
-        paintModel.update(tmpLine, new Point(Integer.parseInt(txtboxStartPointX.getText()), Integer.parseInt(txtboxStartPointY.getText())),
+        newLine = new Line(new Point(Integer.parseInt(txtboxStartPointX.getText()), Integer.parseInt(txtboxStartPointY.getText())),
                 new Point(Integer.parseInt(txtboxEndPointX.getText()), Integer.parseInt(txtboxEndPointY.getText())), outlineColor);
+        
+        paintModel.update(oldLine, newLine);
 
         dispose();
     }

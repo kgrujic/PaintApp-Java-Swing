@@ -17,7 +17,8 @@ public class PointDialog extends Dialog {
     private JFormattedTextField txtboxY;
     private JButton btnOutlineColor;
 
-    private Point tmpPoint;
+    private Point oldPoint;
+    private Point newPoint;
 
 
     public PointDialog() {
@@ -26,11 +27,11 @@ public class PointDialog extends Dialog {
     public PointDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel) {
         setArgumentsForUpdate(isUpdate, oldShape, paintModel);
 
-        // Point tmpPoint = (Point) oldShape;
-        tmpPoint = (Point) oldShape;
+        // Point oldPoint = (Point) oldShape;
+        oldPoint = (Point) oldShape;
 
         setupContentPane(contentPane, buttonOK);
-        setFieldsValuesForUpdate(tmpPoint);
+        setFieldsValuesForUpdate(oldPoint);
         setupColorButtonsListeners(btnOutlineColor, null);
 
 
@@ -80,8 +81,8 @@ public class PointDialog extends Dialog {
 
     private void onOK() {
         // add your code here
-
-        paintModel.update(tmpPoint, Integer.parseInt(txtboxX.getText()), Integer.parseInt(txtboxY.getText()), outlineColor);
+        newPoint = new Point(Integer.parseInt(txtboxX.getText()), Integer.parseInt(txtboxY.getText()), outlineColor);
+        paintModel.update(oldPoint, newPoint);
         dispose();
     }
 

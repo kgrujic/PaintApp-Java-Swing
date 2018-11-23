@@ -23,7 +23,8 @@ public class CircleDialog extends Dialog {
     private JButton btnOutlineColor;
     private JButton btnInsideColor;
 
-    private Circle tmpCircle;
+    private Circle oldCircle;
+    private Circle newCircle;
     private int radius;
     private Point center;
 
@@ -70,12 +71,12 @@ public class CircleDialog extends Dialog {
 
         setArgumentsForUpdate(isUpdate, oldShape, paintModel);
 
-        tmpCircle = (Circle) oldShape;
+        oldCircle = (Circle) oldShape;
 
         if (isUpdate) {
 
             setupContentPane(contentPane, buttonOK);
-            setFieldsValuesForUpdate(tmpCircle);
+            setFieldsValuesForUpdate(oldCircle);
             setupColorButtonsListeners(btnOutlineColor, btnInsideColor);
 
 
@@ -141,9 +142,10 @@ public class CircleDialog extends Dialog {
 
         if (isUpdate) {
 
-            // Center, R, insideC, outlineC
-            paintModel.update(tmpCircle, new Point(Integer.parseInt(txtboxX.getText()), Integer.parseInt(txtboxY.getText())),
+            newCircle = new Circle(new Point(Integer.parseInt(txtboxX.getText()), Integer.parseInt(txtboxY.getText())),
                     Integer.parseInt(txtboxRadius.getText()), insideColor, outlineColor);
+            // Center, R, insideC, outlineC
+            paintModel.update(oldCircle, newCircle);
 
 
         } else {

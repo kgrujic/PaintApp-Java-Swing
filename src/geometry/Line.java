@@ -110,12 +110,13 @@ public class Line extends Shape{
     }
 
     @Override
-    public void update(Object... properties) {
-        for (int i=0; i < properties.length; i++){
-            this.setStartPoint((Point) properties[0]);
-            this.setEndPoint((Point) properties[1]);
-            this.setOutlineColor((Color) properties[2]);
-        }
+    public void update(Shape newShape) {
+
+            Line tmpLine = (Line) newShape;
+            this.setStartPoint(tmpLine.getStartPoint());
+            this.setEndPoint(tmpLine.getEndPoint());
+            this.setOutlineColor(tmpLine.getOutlineColor());
+
     }
 
 

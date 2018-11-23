@@ -107,12 +107,12 @@ public class Point extends Shape implements IMovable{
     }
 
     @Override
-    public void update(Object... properties) {
-        for (int i=0; i < properties.length; i++){
-            this.setX((int) properties[0]);
-            this.setY((int) properties[1]);
-            this.setOutlineColor((Color) properties[2]);
-        }
+    public void update(Shape newShape) {
+        Point tmpPoint = (Point) newShape;
+            this.setX(tmpPoint.getX());
+            this.setY(tmpPoint.getY());
+            this.setOutlineColor(tmpPoint.getOutlineColor());
+
     }
 
 

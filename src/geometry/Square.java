@@ -114,13 +114,13 @@ public class Square extends AreaShape implements IMovable {
     }
 
     @Override
-    public void update(Object... properties) {
-        for (int i = 0; i < properties.length; i++) {
-            this.setUpLeft((Point) properties[0]);
-            this.setSideLength((int) properties[1]);
-            this.setInsideColor((Color) properties[2]);
-            this.setOutlineColor((Color) properties[3]);
-        }
+    public void update(Shape newShape) {
+       Square tmpSquare = (Square) newShape;
+            this.setUpLeft(tmpSquare.getUpLeft());
+            this.setSideLength(tmpSquare.getSideLength());
+            this.setInsideColor(tmpSquare.getInsideColor());
+            this.setOutlineColor(tmpSquare.getOutlineColor());
+
     }
 
     @Override

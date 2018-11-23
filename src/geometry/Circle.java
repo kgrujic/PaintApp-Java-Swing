@@ -104,13 +104,13 @@ public class Circle extends AreaShape implements IMovable{
     }
 
     @Override
-    public void update(Object... properties) {
-        for (int i=0; i< properties.length;i++){
-            this.setCenter((Point) properties[0]);
-            this.setR((int) properties[1]);
-            this.setInsideColor((Color) properties[2]);
-            this.setOutlineColor((Color) properties[3]);
-        }
+    public void update(Shape newShape) {
+            Circle tmpCircle = (Circle) newShape;
+            this.setCenter(tmpCircle.getCenter());
+            this.setR(tmpCircle.getR());
+            this.setInsideColor(tmpCircle.getInsideColor());
+            this.setOutlineColor(tmpCircle.getOutlineColor());
+
     }
 
     @Override

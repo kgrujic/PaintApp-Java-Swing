@@ -25,7 +25,8 @@ public class RectangleDialog extends Dialog {
 
     private int width;
     private int height;
-    private Rectangle tmpRectangle;
+    private Rectangle oldRectangle;
+    private Rectangle newRectangle;
 
 
     public RectangleDialog() {
@@ -67,11 +68,11 @@ public class RectangleDialog extends Dialog {
 
         setArgumentsForUpdate(isUpdate, oldShape, paintModel);
 
-        tmpRectangle = (Rectangle) oldShape;
+        oldRectangle = (Rectangle) oldShape;
 
         if (isUpdate) {
             setupContentPane(contentPane, buttonOK);
-            setFieldsValuesForUpdate(tmpRectangle);
+            setFieldsValuesForUpdate(oldRectangle);
             setupColorButtonsListeners(btnOutlineColor, btnInsideColor);
 
 
@@ -136,10 +137,12 @@ public class RectangleDialog extends Dialog {
         // add your code here
         if (isUpdate) {
 
-            paintModel.update(tmpRectangle, new Point(Integer.parseInt(txtboxULX.getText()), Integer.parseInt(txtboxULY.getText())),
+            newRectangle = new Rectangle(new Point(Integer.parseInt(txtboxULX.getText()), Integer.parseInt(txtboxULY.getText())),
                     Integer.parseInt(txtboxHeight.getText()),
                     Integer.parseInt(txtboxWidth.getText()),
                     insideColor, outlineColor);
+            
+            paintModel.update(oldRectangle, newRectangle);
 
         } else {
             width = Integer.parseInt(txtboxWidth.getText());

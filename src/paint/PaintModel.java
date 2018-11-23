@@ -37,8 +37,8 @@ public class PaintModel {
         return Shapes;
     }
 
-    public void update(Shape shapeToUpdate,Object... properties){
-        shapeToUpdate.update(properties);
+    public void update(Shape shapeToUpdate, Shape newShape){
+        shapeToUpdate.update(newShape);
     }
 
 

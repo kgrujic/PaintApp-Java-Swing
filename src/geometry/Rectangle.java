@@ -102,14 +102,14 @@ public class Rectangle extends Square {
     }
 
     @Override
-    public void update(Object... properties) {
-        for (int i = 0; i < properties.length; i++) {
-            this.setUpLeft((Point) properties[0]);
-            this.setSideLength((int) properties[1]);
-            this.setSideWidth((int) properties[2]);
-            this.setInsideColor((Color) properties[3]);
-            this.setOutlineColor((Color) properties[4]);
-        }
+    public void update(Shape newShape) {
+        Rectangle tmpRectangle = (Rectangle) newShape;
+            this.setUpLeft(tmpRectangle.getUpLeft());
+            this.setSideLength(tmpRectangle.getSideLength());
+            this.setSideWidth(tmpRectangle.getSideWidth());
+            this.setInsideColor(tmpRectangle.getInsideColor());
+            this.setOutlineColor(tmpRectangle.getOutlineColor());
+
     }
 
 
