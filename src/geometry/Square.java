@@ -126,7 +126,13 @@ public class Square extends AreaShape implements IMovable {
 
     @Override
     public Shape cloneInstance() {
-        return null;
+        Square originalSquare = new Square();
+            originalSquare.setUpLeft(this.getUpLeft());
+            originalSquare.setSideLength(this.getSideLength());
+            originalSquare.setInsideColor(this.getInsideColor());
+            originalSquare.setOutlineColor(this.getOutlineColor());
+
+        return originalSquare;
     }
 
     @Override

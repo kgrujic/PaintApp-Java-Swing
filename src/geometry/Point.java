@@ -118,7 +118,12 @@ public class Point extends Shape implements IMovable{
 
     @Override
     public Shape cloneInstance() {
-        return null;
+        Point originalPoint = new Point();
+            originalPoint.setX(this.getX());
+            originalPoint.setY(this.getY());
+            originalPoint.setOutlineColor(this.getOutlineColor());
+
+        return originalPoint;
     }
 
 

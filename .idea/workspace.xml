@@ -3,23 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="466ff27d-fd34-4cfc-90c3-dbe3bff0f45e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/geometry/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/geometry/Circle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/geometry/Line.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/geometry/Line.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/geometry/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/geometry/Point.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/geometry/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/geometry/Rectangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/geometry/Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/geometry/Shape.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/geometry/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/geometry/Square.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintForm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometry/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/Circle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometry/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/Line.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometry/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/Point.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometry/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometry/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/Shape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometry/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/PaintForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/PaintForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/command/CmdUpdateShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/command/CmdUpdateShape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/command/CommandListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/command/CommandListRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/mvc/PaintController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/mvc/PaintController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -38,14 +26,14 @@
     <session id="462748000">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="21" />
+          <entry key="project.closed" value="22" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.20" value="2" />
           <entry key="project.open.time.21" value="2" />
           <entry key="project.open.time.27" value="1" />
-          <entry key="project.open.time.28" value="3" />
+          <entry key="project.open.time.28" value="4" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.31" value="3" />
@@ -56,68 +44,49 @@
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="26" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="form" value="44" />
           <entry key="iml" value="1" />
-          <entry key="java" value="371" />
+          <entry key="java" value="378" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="GUI_DESIGNER_FORM" value="44" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="371" />
+          <entry key="JAVA" value="378" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="39" />
-          <entry key="java" value="20601" />
-          <entry key="txt" value="294" />
+          <entry key="java" value="21198" />
+          <entry key="txt" value="370" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="20601" />
-          <entry key="PLAIN_TEXT" value="333" />
+          <entry key="JAVA" value="21198" />
+          <entry key="PLAIN_TEXT" value="409" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/geometry/Circle.java">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/paint/mvc/PaintController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="77" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="324">
+              <caret line="259" column="19" selection-start-line="259" selection-start-column="19" selection-end-line="259" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3294#3295#0" expanded="true" />
-                <element signature="e#3323#3324#0" expanded="true" />
-                <element signature="e#3366#3367#0" expanded="true" />
-                <element signature="e#3402#3403#0" expanded="true" />
-                <element signature="e#3427#3428#0" expanded="true" />
-                <element signature="e#3451#3452#0" expanded="true" />
-                <element signature="e#3482#3483#0" expanded="true" />
-                <element signature="e#3508#3509#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/command/CmdUpdateShape.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#757#758#0" expanded="true" />
+                <element signature="e#9446#9447#0" expanded="true" />
+                <element signature="e#9523#9524#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,118 +95,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/paint/command/CommandListRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="103">
+              <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
               <folding>
                 <element signature="e#294#295#0" expanded="true" />
                 <element signature="e#317#318#0" expanded="true" />
                 <element signature="e#352#353#0" expanded="true" />
                 <element signature="e#375#376#0" expanded="true" />
-                <element signature="e#700#701#0" expanded="true" />
-                <element signature="e#727#728#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/geometry/Square.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
-              <folding>
-                <element signature="e#3814#3815#0" expanded="true" />
-                <element signature="e#3841#3842#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/mvc/PaintModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#390#391#0" expanded="true" />
-                <element signature="e#828#829#0" expanded="true" />
-                <element signature="e#874#875#0" expanded="true" />
-                <element signature="e#1712#1713#0" expanded="true" />
-                <element signature="e#1741#1742#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/dialogs/CircleDialog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="118" selection-start-line="118" selection-end-line="118" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2506#2507#0" expanded="true" />
-                <element signature="e#2552#2553#0" expanded="true" />
-                <element signature="initializer##0;class#CircleDialog#0" expanded="true" />
-                <element signature="docComment;method#$$$setupUI$$$#0;class#CircleDialog#0" />
-                <element signature="method#$$$setupUI$$$#0;class#CircleDialog#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/paint/mvc/PaintController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="236" column="40" lean-forward="true" selection-start-line="236" selection-start-column="40" selection-end-line="236" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#9432#9433#0" expanded="true" />
-                <element signature="e#9489#9490#0" expanded="true" />
-                <element signature="e#9523#9524#0" expanded="true" />
-                <element signature="e#9565#9566#0" expanded="true" />
-                <element signature="e#10283#10284#0" expanded="true" />
-                <element signature="e#10315#10316#0" expanded="true" />
-                <element signature="e#10368#10369#0" expanded="true" />
-                <element signature="e#10410#10411#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/command/CmdAddShape.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#417#418#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/mvc/PaintView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/geometry/Shape.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-              <folding>
-                <element signature="e#827#828#0" expanded="true" />
-                <element signature="e#882#883#0" expanded="true" />
-                <element signature="e#930#931#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -302,13 +166,13 @@
         <option value="$PROJECT_DIR$/src/paint/PaintForm.form" />
         <option value="$PROJECT_DIR$/src/paint/PaintForm.java" />
         <option value="$PROJECT_DIR$/src/geometry/Shape.java" />
-        <option value="$PROJECT_DIR$/src/geometry/Line.java" />
-        <option value="$PROJECT_DIR$/src/geometry/Point.java" />
-        <option value="$PROJECT_DIR$/src/geometry/Square.java" />
-        <option value="$PROJECT_DIR$/src/geometry/Rectangle.java" />
-        <option value="$PROJECT_DIR$/src/geometry/Circle.java" />
         <option value="$PROJECT_DIR$/src/paint/command/CmdUpdateShape.java" />
         <option value="$PROJECT_DIR$/src/paint/command/CommandListRepository.java" />
+        <option value="$PROJECT_DIR$/src/geometry/Rectangle.java" />
+        <option value="$PROJECT_DIR$/src/geometry/Point.java" />
+        <option value="$PROJECT_DIR$/src/geometry/Line.java" />
+        <option value="$PROJECT_DIR$/src/geometry/Circle.java" />
+        <option value="$PROJECT_DIR$/src/geometry/Square.java" />
         <option value="$PROJECT_DIR$/src/paint/mvc/PaintController.java" />
       </list>
     </option>
@@ -321,7 +185,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="240" />
-    <option name="y" value="126" />
+    <option name="y" value="125" />
     <option name="width" value="1440" />
     <option name="height" value="765" />
   </component>
@@ -342,12 +206,6 @@
               <item name="PaintApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="PaintApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PaintApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PaintApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="geometry" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PaintApp" type="b2602c69:ProjectViewProjectNode" />
@@ -381,7 +239,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="131" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="280" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543007699457" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543050928427" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/paint/dialogs" />
     <property name="settings.editor.selected.configurable" value="project.propGUI" />
@@ -542,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542994620863</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Refactored updateCmd, undo redo for commands">
+      <created>1543007791856</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1543007791856</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -558,7 +423,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989429" visible="true" weight="0.18389262" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989429" visible="true" weight="0.18657719" />
       <window_info id="Structure" order="1" sideWeight="0.5010571" side_tool="true" weight="0.102684565" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -567,12 +432,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32765958" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32765958" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32884097" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32765958" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3323782" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32765958" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3248227" />
@@ -651,7 +516,8 @@
     <MESSAGE value="Refactored update methods" />
     <MESSAGE value="Added commands(add,remove,update,removeall,select)" />
     <MESSAGE value="Added CommandListRepository, changed CreateDialog method and added reference to Dialog Class. Added commands to commandsList." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added CommandListRepository, changed CreateDialog method and added reference to Dialog Class. Added commands to commandsList." />
+    <MESSAGE value="Refactored updateCmd, undo redo for commands" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored updateCmd, undo redo for commands" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -734,33 +600,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/command/CmdAddAllShapes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="e#184#185#0" expanded="true" />
-            <element signature="e#218#219#0" expanded="true" />
-            <element signature="e#261#262#0" expanded="true" />
-            <element signature="e#300#301#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/command/CmdAddAllShapes.java" />
     <entry file="file://$PROJECT_DIR$/src/paint/command/CmdRemoveAllShapes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="53" lean-forward="true" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
-          <folding>
-            <element signature="e#187#188#0" expanded="true" />
-            <element signature="e#221#222#0" expanded="true" />
-            <element signature="e#264#265#0" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -775,13 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -789,13 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#445#446#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -858,37 +688,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/Line.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="125" column="5" lean-forward="true" selection-start-line="125" selection-start-column="5" selection-end-line="125" selection-end-column="5" />
-          <folding>
-            <element signature="e#3247#3248#0" expanded="true" />
-            <element signature="e#3274#3275#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/Rectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
-          <folding>
-            <element signature="e#3720#3721#0" expanded="true" />
-            <element signature="e#3747#3748#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/geometry/AreaShape.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#352#353#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -903,21 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="55" selection-start-line="55" selection-end-line="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="125" selection-start-line="125" selection-end-line="125" />
-          <folding>
-            <element signature="e#2757#2758#0" expanded="true" />
-            <element signature="e#2784#2785#0" expanded="true" />
-            <element signature="e#2834#2835#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -925,24 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/Circle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3294#3295#0" expanded="true" />
-            <element signature="e#3323#3324#0" expanded="true" />
-            <element signature="e#3366#3367#0" expanded="true" />
-            <element signature="e#3402#3403#0" expanded="true" />
-            <element signature="e#3427#3428#0" expanded="true" />
-            <element signature="e#3451#3452#0" expanded="true" />
-            <element signature="e#3482#3483#0" expanded="true" />
-            <element signature="e#3508#3509#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -962,10 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#757#758#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -984,72 +750,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/command/CommandListRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/paint/mvc/PaintModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="142">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paint/command/CmdAddShape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometry/Rectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="120" column="70" selection-start-line="116" selection-start-column="7" selection-end-line="120" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometry/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="123" column="66" selection-start-line="121" selection-start-column="6" selection-end-line="123" selection-end-column="66" />
           <folding>
-            <element signature="e#294#295#0" expanded="true" />
-            <element signature="e#317#318#0" expanded="true" />
-            <element signature="e#352#353#0" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#2810#2811#0" expanded="true" />
+            <element signature="e#2834#2835#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometry/Line.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="127" column="65" selection-start-line="125" selection-start-column="12" selection-end-line="127" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometry/Circle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="119" column="45" lean-forward="true" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/geometry/Square.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-          <folding>
-            <element signature="e#3814#3815#0" expanded="true" />
-            <element signature="e#3841#3842#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="261">
+          <caret line="131" column="65" lean-forward="true" selection-start-line="131" selection-start-column="65" selection-end-line="131" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/mvc/PaintModel.java">
+    <entry file="file://$PROJECT_DIR$/src/paint/command/CommandListRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="103">
+          <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#828#829#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#1712#1713#0" expanded="true" />
-            <element signature="e#1741#1742#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/command/CmdAddShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#417#418#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#375#376#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/paint/mvc/PaintController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="236" column="40" lean-forward="true" selection-start-line="236" selection-start-column="40" selection-end-line="236" selection-end-column="40" />
+        <state relative-caret-position="324">
+          <caret line="259" column="19" selection-start-line="259" selection-start-column="19" selection-end-line="259" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#9432#9433#0" expanded="true" />
-            <element signature="e#9489#9490#0" expanded="true" />
+            <element signature="e#9446#9447#0" expanded="true" />
             <element signature="e#9523#9524#0" expanded="true" />
-            <element signature="e#9565#9566#0" expanded="true" />
-            <element signature="e#10283#10284#0" expanded="true" />
-            <element signature="e#10315#10316#0" expanded="true" />
-            <element signature="e#10368#10369#0" expanded="true" />
-            <element signature="e#10410#10411#0" expanded="true" />
           </folding>
         </state>
       </provider>

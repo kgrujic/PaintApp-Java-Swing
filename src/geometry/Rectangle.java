@@ -113,7 +113,14 @@ public class Rectangle extends Square {
 
     }
     public Shape cloneInstance() {
-        return null;
+        Rectangle originalRectangle = new Rectangle();
+            originalRectangle.setUpLeft(this.getUpLeft());
+            originalRectangle.setSideLength(this.getSideLength());
+            originalRectangle.setSideWidth(this.getSideWidth());
+            originalRectangle.setInsideColor(this.getInsideColor());
+            originalRectangle.setOutlineColor(this.getOutlineColor());
+
+        return originalRectangle;
     }
 
 

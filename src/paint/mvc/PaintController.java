@@ -230,35 +230,53 @@ public class PaintController {
 
             @Override
             public void actionPerformed(ActionEvent e) {
+                btnRedo.setEnabled(true);
+
                 if(commandListRepository.getIndex() != 0) {
+                    getCurrentCommand();
                     commandListRepository.getCurrentCommand().unexecute();
                     commandListRepository.DecrementIndex();
 
+
+                        if (commandListRepository.getIndex() == 0){
+                            btnUndo.setEnabled(false);
+                        }
+
                     paintView.repaint();
                 }
-                else
-                    btnUndo.setEnabled(false);
-
 
             }
         });
 
+        // TODO No redo for command when new object is added after undo
+
         btnRedo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(commandListRepository.getIndex() != commandListRepository.getAllCommands().size() -1) {
+                btnUndo.setEnabled(true);
+
+                if(commandListRepository.getIndex() != commandListRepository.getAllCommands().size()) {
                     commandListRepository.IncrementIndex();
+                   getCurrentCommand();
                     commandListRepository.getCurrentCommand().execute();
+
+                        if(commandListRepository.getIndex() == commandListRepository.getAllCommands().size()){
+                            btnRedo.setEnabled(false);
+                        }
+
                     paintView.repaint();
                 }
-                else
-                    btnRedo.setEnabled(false);
+
+
             }
         });
     }
 
     public void AddCommand(ICommand command){
         commandListRepository.addCommand(command);
+    }
+    public void getCurrentCommand(){
+       System.out.println(commandListRepository.getCurrentCommand());
     }
 
     public void showMainFrame(){

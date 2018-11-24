@@ -122,7 +122,12 @@ public class Line extends Shape{
 
     @Override
     public Shape cloneInstance() {
-        return null;
+        Line originalLine = new Line();
+            originalLine.setStartPoint(this.getStartPoint());
+            originalLine.setEndPoint(this.getEndPoint());
+            originalLine.setOutlineColor(this.getOutlineColor());
+
+        return originalLine;
     }
 
 
