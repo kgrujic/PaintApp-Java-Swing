@@ -3,6 +3,7 @@ package paint.dialogs;
 import geometry.Shape;
 import paint.command.CmdUpdateShape;
 import paint.command.CommandListRepository;
+import paint.command.ICommand;
 import paint.mvc.PaintModel;
 
 import javax.swing.*;
@@ -58,7 +59,8 @@ public abstract class Dialog extends JDialog {
     public void Update(Shape oldShape,Shape newShape){
         CmdUpdateShape cmdUpdateShape = new CmdUpdateShape(paintModel, oldShape, newShape);
         cmdUpdateShape.execute();
-        commandListRepository.addCommand(cmdUpdateShape);
+        ICommand clone = cmdUpdateShape.clone();
+        commandListRepository.addCommandToHistory(clone);
 
     }
 

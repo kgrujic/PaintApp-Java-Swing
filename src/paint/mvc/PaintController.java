@@ -13,6 +13,7 @@ import paint.dialogs.SquareDialog;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 public class PaintController {
 
@@ -48,10 +49,11 @@ public class PaintController {
 
 
 
+
     public PaintController(PaintForm paintForm, PaintModel paintModel) {
         this.paintForm = paintForm;
         this.paintModel = paintModel;
-        this.commandListRepository = new CommandListRepository();
+        this.commandListRepository = new CommandListRepository(paintModel);
 
         setPaintView(paintForm.getPaint());
         getPaintView().setShapes(paintModel.getShapes());
@@ -73,18 +75,23 @@ public class PaintController {
 
     private void click() {
 
+
+
+
         Conditionally<SideEffect> conditionally = (c, f) -> {
             if (c) {
                 f.invoke();
             }
         };
 
+
+
         paintView.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
 
                 Point upLeft = new Point(e.getX(),e.getY());
-                paintModel.deselectAllShapes();
+                //paintModel.deselectAllShapes();
 
 
                 conditionally.invoke(rbtnSelect.isSelected(), () -> {
@@ -93,7 +100,7 @@ public class PaintController {
                    //paintModel.selectShape(selectedShape);
                     CmdSelectShape cmdSelectShape = new CmdSelectShape(paintModel,selectedShape);
                     cmdSelectShape.execute();
-                    AddCommand(cmdSelectShape);
+                    cloneCommandAndAddToHistory(cmdSelectShape);
                     paintView.repaint();
                 });
                 conditionally.invoke(rbtnSquare.isSelected(), () -> {
@@ -104,7 +111,7 @@ public class PaintController {
                         //paintModel.add(s);
                         CmdAddShape cmdAddSquare = new CmdAddShape(paintModel,s);
                         cmdAddSquare.execute();
-                        AddCommand(cmdAddSquare);
+                        cloneCommandAndAddToHistory(cmdAddSquare);
                         paintView.repaint();
                     }
                 });
@@ -117,7 +124,7 @@ public class PaintController {
                        // paintModel.add(c);
                         CmdAddShape cmdAddCircle = new CmdAddShape(paintModel,c);
                         cmdAddCircle.execute();
-                        AddCommand(cmdAddCircle);
+                        cloneCommandAndAddToHistory(cmdAddCircle);
                         paintView.repaint();
                     }
                 });
@@ -129,7 +136,7 @@ public class PaintController {
                        // paintModel.add(r);
                         CmdAddShape cmdAddRectangle = new CmdAddShape(paintModel,r);
                         cmdAddRectangle.execute();
-                        AddCommand(cmdAddRectangle);
+                        cloneCommandAndAddToHistory(cmdAddRectangle);
                         paintView.repaint();
                     }
                 });
@@ -144,7 +151,7 @@ public class PaintController {
                        // paintModel.add(l);
                         CmdAddShape cmdAddLine = new CmdAddShape(paintModel,l);
                         cmdAddLine.execute();
-                        AddCommand(cmdAddLine);
+                        cloneCommandAndAddToHistory(cmdAddLine);
                         paintView.repaint();
 
                         lineStartPoint = null;
@@ -156,9 +163,10 @@ public class PaintController {
                     //paintModel.add(p);
                     CmdAddShape cmdAddPoint = new CmdAddShape(paintModel,p);
                     cmdAddPoint.execute();
-                    AddCommand(cmdAddPoint);
+                    cloneCommandAndAddToHistory(cmdAddPoint);
                     paintView.repaint();
                 });
+
 
             }
         });
@@ -192,7 +200,7 @@ public class PaintController {
                         //paintModel.remove(shapeToDelete);
                         CmdRemoveShape cmdRemoveShape = new CmdRemoveShape(paintModel,shapeToDelete);
                         cmdRemoveShape.execute();
-                        AddCommand(cmdRemoveShape);
+                        cloneCommandAndAddToHistory(cmdRemoveShape);
                         paintView.repaint();
                         clickPoint = new Point(0,0);
                     }
@@ -200,13 +208,30 @@ public class PaintController {
         }
     });
 
+
+        btnUndo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                commandListRepository.Undo();
+                paintView.repaint();
+            }
+        });
+
+        btnRedo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                commandListRepository.Redo();
+                paintView.repaint();
+            }
+        });
+
         btnClearAll.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //paintModel.removeAllShapes();
                 CmdRemoveAllShapes cmdRemoveAllShapes = new CmdRemoveAllShapes(paintModel);
                 cmdRemoveAllShapes.execute();
-                AddCommand(cmdRemoveAllShapes);
+                cloneCommandAndAddToHistory(cmdRemoveAllShapes);
                 paintView.repaint();
             }
         });
@@ -226,57 +251,12 @@ public class PaintController {
             }
         });
 
-        btnUndo.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                btnRedo.setEnabled(true);
-
-                if(commandListRepository.getIndex() != 0) {
-                    getCurrentCommand();
-                    commandListRepository.getCurrentCommand().unexecute();
-                    commandListRepository.DecrementIndex();
-
-
-                        if (commandListRepository.getIndex() == 0){
-                            btnUndo.setEnabled(false);
-                        }
-
-                    paintView.repaint();
-                }
-
-            }
-        });
-
-        // TODO No redo for command when new object is added after undo
-
-        btnRedo.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                btnUndo.setEnabled(true);
-
-                if(commandListRepository.getIndex() != commandListRepository.getAllCommands().size()) {
-                    commandListRepository.IncrementIndex();
-                   getCurrentCommand();
-                    commandListRepository.getCurrentCommand().execute();
-
-                        if(commandListRepository.getIndex() == commandListRepository.getAllCommands().size()){
-                            btnRedo.setEnabled(false);
-                        }
-
-                    paintView.repaint();
-                }
-
-
-            }
-        });
     }
 
-    public void AddCommand(ICommand command){
-        commandListRepository.addCommand(command);
-    }
-    public void getCurrentCommand(){
-       System.out.println(commandListRepository.getCurrentCommand());
+
+    public void cloneCommandAndAddToHistory(ICommand commandToClone){
+        ICommand clone = commandToClone.clone();
+        commandListRepository.addCommandToHistory(clone);
     }
 
     public void showMainFrame(){

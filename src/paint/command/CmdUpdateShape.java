@@ -3,7 +3,7 @@ package paint.command;
 import geometry.Shape;
 import paint.mvc.PaintModel;
 
-public class CmdUpdateShape implements ICommand {
+public class CmdUpdateShape implements ICommand, Cloneable {
 
     private PaintModel model;
     private Shape oldState;
@@ -29,5 +29,16 @@ public class CmdUpdateShape implements ICommand {
     @Override
     public void unexecute() {
         model.update(oldState, originalState);
+    }
+
+    @Override
+    public CmdUpdateShape clone() {
+        try {
+            return (CmdUpdateShape) super.clone();
+        } catch (CloneNotSupportedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return null;
     }
 }

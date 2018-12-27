@@ -6,16 +6,19 @@ import geometry.Shape;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
-
+import java.util.Collections;
 
 
 public class PaintModel {
 
     private ArrayList<Shape> Shapes;
 
+    private  ArrayList<Shape> selectedShapes;
+
 
     public PaintModel() {
         Shapes = new ArrayList<Shape>();
+        selectedShapes = new ArrayList<Shape>();
     }
 
     public void add(Shape newShape) {
@@ -46,13 +49,13 @@ public class PaintModel {
     }
 
 
-    public <T extends Shape> T getSelectedShape(Point clickPoint) {
+    public Shape getSelectedShape(Point clickPoint) {
 
-        T tmp = null;
+        Shape tmp = null;
 
         for(int i =  Shapes.size() - 1; i >= 0; i-- ) {
             if (Shapes.get(i).contains(clickPoint.getX(), clickPoint.getY())) {
-                tmp = (T)Shapes.get(i);
+                tmp = Shapes.get(i);
                 break;
             }
         }
@@ -60,15 +63,24 @@ public class PaintModel {
     }
 
 
-    public void selectShape(Shape newSelectedShape) {
+    public void selectOrDeselectShape(Shape newSelectedShape) {
 
-        deselectAllShapes();
+        if(newSelectedShape != null) {
 
-        if(newSelectedShape != null){
-            int indexOfNewSelectedShape = Shapes.indexOf(newSelectedShape);
-            Shape shapeInList = Shapes.get(indexOfNewSelectedShape);
-            shapeInList.setSelected(true);
+            if (newSelectedShape.isSelected() == true && newSelectedShape != null) {
+                newSelectedShape.setSelected(false);
+                selectedShapes.remove(newSelectedShape);
 
+            }
+            else {
+
+                if (newSelectedShape.isSelected() == false && newSelectedShape != null) {
+                    newSelectedShape.setSelected(true);
+                    selectedShapes.add(newSelectedShape);
+                }
+
+
+            }
         }
     }
 
@@ -80,6 +92,11 @@ public class PaintModel {
 
     public ArrayList<Shape> getShapes(){
         return Shapes;
+    }
+
+    public boolean areTwoListsOfShapesEqual(ArrayList<Shape> list1,ArrayList<Shape> list2){
+        return   list1.containsAll(list2) &&  list2.containsAll(list1) ;
+
     }
 
    public Color dialogSetOutlineColor(JButton btnOutlineColor){

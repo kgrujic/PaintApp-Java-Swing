@@ -3,10 +3,13 @@ package paint.command;
 import geometry.Shape;
 import paint.mvc.PaintModel;
 
-public class CmdAddShape implements ICommand {
+public class CmdAddShape implements ICommand,Cloneable{
 
     private PaintModel model;
     private Shape shape;
+
+    public CmdAddShape() {
+    }
 
     public CmdAddShape(PaintModel model, Shape shape) {
         this.model = model;
@@ -22,4 +25,18 @@ public class CmdAddShape implements ICommand {
     public void unexecute() {
         model.remove(shape);
     }
+
+
+    @Override
+    public CmdAddShape clone() {
+        try {
+            return (CmdAddShape) super.clone();
+        } catch (CloneNotSupportedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
 }
