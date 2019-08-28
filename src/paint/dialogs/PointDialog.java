@@ -13,8 +13,10 @@ public class PointDialog extends Dialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
+
     private JLabel lblX;
     private JLabel lblY;
+
     private JFormattedTextField txtboxX;
     private JFormattedTextField txtboxY;
     private JButton btnOutlineColor;
@@ -27,8 +29,12 @@ public class PointDialog extends Dialog {
     }
 
     public PointDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
+
         setArgumentsForUpdate(isUpdate, oldShape, paintModel);
         setCommandListRepository(commandListRepository);
+
+        dialogInputValidation(txtboxX, buttonOK);
+        dialogInputValidation(txtboxY, buttonOK);
 
         // Point oldPoint = (Point) oldShape;
         oldPoint = (Point) oldShape;
@@ -65,7 +71,7 @@ public class PointDialog extends Dialog {
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
 
-        setupDialog(dialogConfiguration);
+        setupDialogUpdate(dialogConfiguration, "Point");
     }
 
     @Override
@@ -84,8 +90,9 @@ public class PointDialog extends Dialog {
 
     private void onOK() {
         // add your code here
-        newPoint = new Point(Integer.parseInt(txtboxX.getText()), Integer.parseInt(txtboxY.getText()), outlineColor);
-        //paintModel.update(oldPoint, newPoint);
+        newPoint = new Point(Integer.parseInt(txtboxX.getText().trim()), Integer.parseInt(txtboxY.getText().trim()), outlineColor);
+
+        newPoint.setSelected(oldPoint.isSelected());
         Update(oldPoint, newPoint);
         dispose();
     }
@@ -161,4 +168,5 @@ public class PointDialog extends Dialog {
     public JComponent $$$getRootComponent$$$() {
         return contentPane;
     }
+
 }

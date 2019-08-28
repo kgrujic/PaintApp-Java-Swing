@@ -14,14 +14,17 @@ public class LineDialog extends Dialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
+
     private JFormattedTextField txtboxStartPointX;
     private JFormattedTextField txtboxStartPointY;
     private JFormattedTextField txtboxEndPointX;
     private JFormattedTextField txtboxEndPointY;
+
     private JLabel lblStartPointX;
     private JLabel lblStartPointY;
     private JLabel lblEndPointX;
     private JLabel lblEndPointY;
+
     private JButton btnOutlineColor;
     private Line oldLine;
     private Line newLine;
@@ -35,6 +38,11 @@ public class LineDialog extends Dialog {
 
         setArgumentsForUpdate(isUpdate, oldShape, paintModel);
         setCommandListRepository(commandListRepository);
+
+        dialogInputValidation(txtboxStartPointX, buttonOK);
+        dialogInputValidation(txtboxStartPointY, buttonOK);
+        dialogInputValidation(txtboxEndPointX, buttonOK);
+        dialogInputValidation(txtboxEndPointY, buttonOK);
 
         oldLine = (Line) oldShape;
 
@@ -73,7 +81,7 @@ public class LineDialog extends Dialog {
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
 
 
-        setupDialog(dialogConfiguration);
+        setupDialogUpdate(dialogConfiguration, "Line");
     }
 
     @Override
@@ -94,10 +102,11 @@ public class LineDialog extends Dialog {
 
     private void onOK() {
         // add your code here
-        newLine = new Line(new Point(Integer.parseInt(txtboxStartPointX.getText()), Integer.parseInt(txtboxStartPointY.getText())),
-                new Point(Integer.parseInt(txtboxEndPointX.getText()), Integer.parseInt(txtboxEndPointY.getText())), outlineColor);
+        newLine = new Line(new Point(Integer.parseInt(txtboxStartPointX.getText().trim()), Integer.parseInt(txtboxStartPointY.getText().trim())),
+                new Point(Integer.parseInt(txtboxEndPointX.getText().trim()), Integer.parseInt(txtboxEndPointY.getText().trim())), outlineColor);
 
-        //paintModel.update(oldLine, newLine);
+        newLine.setSelected(oldLine.isSelected());
+
         Update(oldLine, newLine);
 
         dispose();
@@ -187,4 +196,5 @@ public class LineDialog extends Dialog {
     public JComponent $$$getRootComponent$$$() {
         return contentPane;
     }
+
 }

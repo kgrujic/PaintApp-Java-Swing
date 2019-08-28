@@ -14,12 +14,17 @@ public class SquareDialog extends Dialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
-    private JLabel lblSideLength;
+
+
     private JFormattedTextField txtboxSideLength;
-    private JLabel lblULY;
-    private JFormattedTextField txtboxULY;
-    private JLabel lblULX;
     private JFormattedTextField txtboxULX;
+    private JFormattedTextField txtboxULY;
+
+
+    private JLabel lblSideLength;
+    private JLabel lblULY;
+    private JLabel lblULX;
+
     private JButton btnOutlineColor;
     private JButton btnInsideColor;
 
@@ -29,6 +34,11 @@ public class SquareDialog extends Dialog {
 
 
     public SquareDialog() {
+
+        buttonOK.setEnabled(false);
+        dialogInputValidation(txtboxSideLength, buttonOK);
+
+
         setupContentPane(contentPane, buttonOK);
         setVisibilityToFalse();
 
@@ -59,13 +69,18 @@ public class SquareDialog extends Dialog {
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
 
-        setupDialog(dialogConfiguration);
+        setupDialogCreate(dialogConfiguration, "Square");
     }
 
     public SquareDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
 
         setArgumentsForUpdate(isUpdate, oldShape, paintModel);
         setCommandListRepository(commandListRepository);
+
+        dialogInputValidation(txtboxSideLength, buttonOK);
+        dialogInputValidation(txtboxULX, buttonOK);
+        dialogInputValidation(txtboxULY, buttonOK);
+
 
         oldSquare = (Square) oldShape;
 
@@ -103,7 +118,7 @@ public class SquareDialog extends Dialog {
                 }
             }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
 
-            setupDialog(dialogConfiguration);
+            setupDialogUpdate(dialogConfiguration, "Square");
         }
     }
 
@@ -135,13 +150,14 @@ public class SquareDialog extends Dialog {
         // add your code here
         if (isUpdate) {
 
-            newSquare = new Square(new Point(Integer.parseInt(txtboxULX.getText()), Integer.parseInt(txtboxULY.getText())),
-                    Integer.parseInt(txtboxSideLength.getText()), outlineColor, insideColor);
-            //paintModel.update(oldSquare, newSquare);
+            newSquare = new Square(new Point(Integer.parseInt(txtboxULX.getText().trim()), Integer.parseInt(txtboxULY.getText().trim())),
+                    Integer.parseInt(txtboxSideLength.getText().trim()), outlineColor, insideColor);
+
+            newSquare.setSelected(oldSquare.isSelected());
             Update(oldSquare, newSquare);
 
         } else {
-            sideLength = Integer.parseInt(txtboxSideLength.getText());
+            sideLength = Integer.parseInt(txtboxSideLength.getText().trim());
             readyToAdd = true;
         }
         dispose();
@@ -237,4 +253,5 @@ public class SquareDialog extends Dialog {
     public JComponent $$$getRootComponent$$$() {
         return contentPane;
     }
+
 }

@@ -8,7 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Line extends Shape{
-
+    private static final long serialVersionUID = 5510713369353881462L;
     private Point startPoint;
     private Point endPoint;
 
@@ -105,7 +105,7 @@ public class Line extends Shape{
     }
 
     @Override
-    public <T extends JDialog> T createDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
+    public <T extends JDialog> T createDialogForUpdate(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
         LineDialog lineDialog = new LineDialog(isUpdate,oldShape, paintModel,commandListRepository);
         return (T) lineDialog;
     }
@@ -117,15 +117,18 @@ public class Line extends Shape{
             this.setStartPoint(tmpLine.getStartPoint());
             this.setEndPoint(tmpLine.getEndPoint());
             this.setOutlineColor(tmpLine.getOutlineColor());
+            this.setSelected(tmpLine.isSelected());
 
     }
 
     @Override
     public Shape cloneInstance() {
+
         Line originalLine = new Line();
             originalLine.setStartPoint(this.getStartPoint());
             originalLine.setEndPoint(this.getEndPoint());
             originalLine.setOutlineColor(this.getOutlineColor());
+            originalLine.setSelected(this.isSelected());
 
         return originalLine;
     }

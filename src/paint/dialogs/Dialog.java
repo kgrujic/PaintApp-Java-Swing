@@ -3,23 +3,26 @@ package paint.dialogs;
 import geometry.Shape;
 import paint.command.CmdUpdateShape;
 import paint.command.CommandListRepository;
-import paint.command.ICommand;
+import paint.helpers.ColorDialogSetup;
+import paint.log.Helpers;
 import paint.mvc.PaintModel;
 
 import javax.swing.*;
+import javax.swing.text.MaskFormatter;
 import java.awt.*;
 import java.awt.event.*;
+import java.text.ParseException;
 
 public abstract class Dialog extends JDialog {
-
 
     // Dialog look
     protected DialogConfiguration dialogConfiguration;
 
-    // Update
+    // Updated
     protected boolean isUpdate;
     protected Shape oldShape;
     protected PaintModel paintModel;
+
     protected Color outlineColor;
     protected Color insideColor;
 
@@ -28,6 +31,8 @@ public abstract class Dialog extends JDialog {
 
     // Command
     private CommandListRepository commandListRepository;
+    private Helpers helper = new Helpers();
+    private ColorDialogSetup colorDialogSetup = new ColorDialogSetup();
 
     public abstract void setFieldsValuesForUpdate(Shape tmpShape);
 
@@ -50,18 +55,75 @@ public abstract class Dialog extends JDialog {
         getRootPane().setDefaultButton(buttonOK);
     }
 
-    public void setupDialog(DialogConfiguration dialogConfiguration) {
+    public void setupDialogUpdate(DialogConfiguration dialogConfiguration, String shapeType) {
         dialogConfiguration = new DialogConfiguration();
-        dialogConfiguration.setSizeAndPosition(this);
+        dialogConfiguration.setSizeAndPositionUpdate(this, shapeType);
 
     }
 
-    public void Update(Shape oldShape,Shape newShape){
-        CmdUpdateShape cmdUpdateShape = new CmdUpdateShape(paintModel, oldShape, newShape);
-        cmdUpdateShape.execute();
-        ICommand clone = cmdUpdateShape.clone();
-        commandListRepository.addCommandToHistory(clone);
+    public void setupDialogCreate(DialogConfiguration dialogConfiguration, String shapeType) {
+        dialogConfiguration = new DialogConfiguration();
+        dialogConfiguration.setSizeAndPositionCreate(this, shapeType);
 
+    }
+
+
+    public void Update(Shape oldShape,Shape newShape){
+
+
+        CmdUpdateShape cmdUpdateShape = new CmdUpdateShape(oldShape, newShape);
+        cmdUpdateShape.execute();
+
+        commandListRepository.addCommandToHistory(cmdUpdateShape,helper.makeCommandUpdate(oldShape,newShape,"Updated"),false);
+
+    }
+
+    public void dialogInputValidation(JFormattedTextField input, JButton button){
+
+        addMaskFormatter(input);
+
+
+        input.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+                if (e.getExtendedKeyCode() == KeyEvent.VK_BACK_SPACE) {
+
+                    if (input.getText().trim().length() == 0) {
+                        button.setEnabled(false);
+                    }
+
+                }
+                else if (!(input.getText().equals(new String())) && !Character.isLetter(e.getKeyChar())) {
+                    button.setEnabled(true);
+                }
+            }
+        });
+
+    }
+
+
+    private void addMaskFormatter(JFormattedTextField input){
+        try {
+
+            MaskFormatter intMask = new MaskFormatter("#########");
+            intMask.install(input);
+
+        }
+        catch (ParseException ex) {
+            ex.printStackTrace();
+
+        }
     }
 
     public void setupColorButtonsListeners(JButton btnOutlineColor, JButton btnInsideColor){
@@ -70,14 +132,14 @@ public abstract class Dialog extends JDialog {
             btnOutlineColor.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    outlineColor = paintModel.dialogSetOutlineColor(btnOutlineColor);
+                    outlineColor = colorDialogSetup.dialogSetOutlineColor(btnOutlineColor);
                 }
             });
 
             btnInsideColor.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    insideColor = paintModel.dialogSetInsideColor(btnInsideColor);
+                    insideColor = colorDialogSetup.dialogSetInsideColor(btnInsideColor);
                 }
             });
         }
@@ -85,7 +147,7 @@ public abstract class Dialog extends JDialog {
             btnOutlineColor.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    outlineColor = paintModel.dialogSetOutlineColor(btnOutlineColor);
+                    outlineColor = colorDialogSetup.dialogSetOutlineColor(btnOutlineColor);
                 }
             });
         }

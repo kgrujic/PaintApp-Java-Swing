@@ -5,6 +5,7 @@ import paint.mvc.PaintModel;
 public class CmdRemoveAllShapes implements ICommand, Cloneable{
     private PaintModel model;
 
+
     public CmdRemoveAllShapes(PaintModel model) {
         this.model = model;
     }
@@ -19,14 +20,7 @@ public class CmdRemoveAllShapes implements ICommand, Cloneable{
         model.addAllShapes();
     }
 
-    @Override
-    public CmdRemoveAllShapes clone() {
-        try {
-            return (CmdRemoveAllShapes) super.clone();
-        } catch (CloneNotSupportedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return null;
-    }
+
+
+
 }

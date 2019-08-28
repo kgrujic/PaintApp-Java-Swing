@@ -3,7 +3,6 @@ package paint.dialogs;
 import geometry.Circle;
 import geometry.Shape;
 import geometry.Point;
-import paint.command.CmdUpdateShape;
 import paint.command.CommandListRepository;
 import paint.mvc.PaintModel;
 
@@ -17,26 +16,32 @@ public class CircleDialog extends Dialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
+
     private JFormattedTextField txtboxRadius;
-    private JLabel lblRadius;
     private JFormattedTextField txtboxX;
     private JFormattedTextField txtboxY;
+
+    private JLabel lblRadius;
     private JLabel lblCenterX;
     private JLabel lblCenterY;
+
     private JButton btnOutlineColor;
     private JButton btnInsideColor;
 
     private Circle oldCircle;
     private Circle newCircle;
     private int radius;
-    private Point center;
+
 
     public CircleDialog() {
+
+        buttonOK.setEnabled(false);
+        dialogInputValidation(txtboxRadius, buttonOK);
+
 
         setupContentPane(contentPane, buttonOK);
 
         setVisibilityToFalse();
-
 
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -66,7 +71,7 @@ public class CircleDialog extends Dialog {
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
 
 
-        setupDialog(dialogConfiguration);
+        setupDialogCreate(dialogConfiguration, "Circle");
 
     }
 
@@ -74,6 +79,10 @@ public class CircleDialog extends Dialog {
 
         setArgumentsForUpdate(isUpdate, oldShape, paintModel);
         setCommandListRepository(commandListRepository);
+
+        dialogInputValidation(txtboxRadius, buttonOK);
+        dialogInputValidation(txtboxX, buttonOK);
+        dialogInputValidation(txtboxY, buttonOK);
 
         oldCircle = (Circle) oldShape;
 
@@ -113,13 +122,14 @@ public class CircleDialog extends Dialog {
             }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
 
 
-            setupDialog(dialogConfiguration);
+            setupDialogUpdate(dialogConfiguration, "Circle");
 
         }
     }
 
 
     public void setFieldsValuesForUpdate(Shape tmpShape) {
+
         Circle tmpCircle = (Circle) tmpShape;
         txtboxRadius.setText(String.valueOf(tmpCircle.getR()));
         txtboxX.setText(String.valueOf(tmpCircle.getCenter().getX()));
@@ -146,16 +156,18 @@ public class CircleDialog extends Dialog {
 
         if (isUpdate) {
 
-            newCircle = new Circle(new Point(Integer.parseInt(txtboxX.getText()), Integer.parseInt(txtboxY.getText())),
-                    Integer.parseInt(txtboxRadius.getText()), outlineColor, insideColor);
-
+            newCircle = new Circle(new Point(Integer.parseInt(txtboxX.getText().trim()), Integer.parseInt(txtboxY.getText().trim())),
+                    Integer.parseInt(txtboxRadius.getText().trim()), outlineColor, insideColor);
+            newCircle.setSelected(oldCircle.isSelected());
             Update(oldCircle, newCircle);
 
 
         } else {
-            // add your code here
-            radius = Integer.parseInt(txtboxRadius.getText());
+
+            radius = Integer.parseInt(txtboxRadius.getText().trim());
             readyToAdd = true;
+
+
         }
         dispose();
     }
@@ -172,10 +184,6 @@ public class CircleDialog extends Dialog {
 
     public boolean isReadyToAdd() {
         return readyToAdd;
-    }
-
-    public void setReadyToAdd(boolean readyToAdd) {
-        this.readyToAdd = readyToAdd;
     }
 
 
@@ -258,4 +266,5 @@ public class CircleDialog extends Dialog {
     public JComponent $$$getRootComponent$$$() {
         return contentPane;
     }
+
 }

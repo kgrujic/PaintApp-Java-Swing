@@ -1,67 +1,210 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="466ff27d-fd34-4cfc-90c3-dbe3bff0f45e" name="Default Changelist" comment="Fixed update undo bug, undo redo buttons disabled when there is no commands for redo or undo.">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Katarina_Grujic.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Katarina_Grujic.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="466ff27d-fd34-4cfc-90c3-dbe3bff0f45e" name="Default Changelist" comment="Initial Commit">
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/down-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/geometry/HexagonAdapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintApp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/command/CmdAddShape.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/command/CmdBringToBack.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/command/CmdBringToFront.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/command/CmdRedo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/command/CmdRemoveAllShapes.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/command/CmdRemoveShape.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/command/CmdToBack.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/command/CmdToFront.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/command/CmdUndo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/command/CmdUpdateShape.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/command/CommandListRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/command/ICommand.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/CircleDialog$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/CircleDialog$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/CircleDialog$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/CircleDialog$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/CircleDialog$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/CircleDialog$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/CircleDialog$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/CircleDialog$8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/CircleDialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/Dialog$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/Dialog$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/Dialog$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/Dialog$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/Dialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/DialogConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/HexagonDialog$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/HexagonDialog$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/HexagonDialog$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/HexagonDialog$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/HexagonDialog$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/HexagonDialog$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/HexagonDialog$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/HexagonDialog$8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/HexagonDialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/LineDialog$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/LineDialog$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/LineDialog$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/LineDialog$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/LineDialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/PointDialog$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/PointDialog$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/PointDialog$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/PointDialog$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/PointDialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/RectangleDialog$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/RectangleDialog$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/RectangleDialog$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/RectangleDialog$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/RectangleDialog$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/RectangleDialog$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/RectangleDialog$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/RectangleDialog$8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/RectangleDialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/SquareDialog$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/SquareDialog$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/SquareDialog$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/SquareDialog$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/SquareDialog$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/SquareDialog$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/SquareDialog$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/SquareDialog$8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/dialogs/SquareDialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/helpers/ColorDialogSetup.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/helpers/Selection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/log/CommandExecutionFromLog$commands.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/log/CommandExecutionFromLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/log/Helpers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/log/LineParser$shapes.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/log/LineParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/log/ListAction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$10.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$11.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$12.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$13.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$14.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$15.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$16.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$17.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$18.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$19.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$9.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$Conditionally.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController$SideEffect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/mvc/PaintView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/observer/IObserverImage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/observer/IObserverLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/observer/IObserverUndoRedo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/observer/IObserverUpdateDeleteClearAllDeselectAll.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/observer/IObserverZIndex.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/observer/ImageObservable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/observer/LogObservable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/observer/ManageObservers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/observer/Observer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/observer/UndoRedoObservable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/observer/UpdateDeleteClearAllObservable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/observer/ZIndexObservable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/strategy/exportfiles/ExportContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/strategy/exportfiles/ExportImage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/strategy/exportfiles/ExportLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/strategy/exportfiles/ExportStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/strategy/importfiles/ImportContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/strategy/importfiles/ImportImage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/strategy/importfiles/ImportLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/strategy/importfiles/ImportStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/AbstractLayout.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/DimensionInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/GridConstraints.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/GridLayoutManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/Spacer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/SupportCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/down-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/geometry/HexagonAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/command/CmdBringToBack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/command/CmdBringToFront.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/command/CmdRedo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/command/CmdToBack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/command/CmdToFront.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/command/CmdUndo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/dialogs/HexagonDialog.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/dialogs/HexagonDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/helpers/ColorDialogSetup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/helpers/Selection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/log/CommandExecutionFromLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/log/Helpers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/log/LineParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/log/ListAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/observer/IObserverImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/observer/IObserverLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/observer/IObserverUndoRedo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/observer/IObserverUpdateDeleteClearAllDeselectAll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/observer/IObserverZIndex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/observer/ImageObservable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/observer/LogObservable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/observer/ManageObservers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/observer/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/observer/UndoRedoObservable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/observer/UpdateDeleteClearAllObservable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/observer/ZIndexObservable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/strategy/exportfiles/ExportContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/strategy/exportfiles/ExportImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/strategy/exportfiles/ExportLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/strategy/exportfiles/ExportStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/strategy/importfiles/ImportContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/strategy/importfiles/ImportImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/strategy/importfiles/ImportLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paint/strategy/importfiles/ImportStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PaintApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PaintApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/geometry/AreaShape.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/geometry/AreaShape.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/geometry/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/geometry/Circle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PaintApp/geometry/Line.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/geometry/Line.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PaintApp/geometry/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/geometry/Point.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PaintApp/geometry/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/geometry/Rectangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/geometry/Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/geometry/Shape.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PaintApp/geometry/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/geometry/Square.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/PaintApp/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaintApp/paint/PaintForm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometry/AreaShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/AreaShape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometry/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometry/IMovable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/IMovable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometry/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/Line.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometry/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/Point.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometry/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/Rectangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometry/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/Shape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometry/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/PaintApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/PaintForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintForm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/PaintForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/command/CmdAddShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/command/CmdAddShape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/command/CmdRemoveAllShapes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/command/CmdRemoveAllShapes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/command/CmdRemoveShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/command/CmdRemoveShape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/command/CmdSelectShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/command/CmdSelectShape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paint/command/CmdSelectShape.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/command/CmdUpdateShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/command/CmdUpdateShape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/command/CommandListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/command/CommandListRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/command/ICommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/command/ICommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/dialogs/CircleDialog.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/dialogs/CircleDialog.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/dialogs/CircleDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/dialogs/CircleDialog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/dialogs/Dialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/dialogs/Dialog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/dialogs/DialogConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/dialogs/DialogConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/dialogs/LineDialog.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/dialogs/LineDialog.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/dialogs/LineDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/dialogs/LineDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/dialogs/PointDialog.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/dialogs/PointDialog.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/dialogs/PointDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/dialogs/PointDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/dialogs/RectangleDialog.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/dialogs/RectangleDialog.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/dialogs/RectangleDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/dialogs/RectangleDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paint/dialogs/SquareDialog.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/dialogs/SquareDialog.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/dialogs/SquareDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/dialogs/SquareDialog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/mvc/PaintController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/mvc/PaintController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/mvc/PaintModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/mvc/PaintModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/paint/mvc/PaintView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/mvc/PaintView.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,36 +216,8 @@
       <FILTER>paint.*</FILTER>
     </SUITE>
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/paint/command/CommandListRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1380">
-              <caret line="92" selection-start-line="92" selection-end-line="92" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/mvc/PaintController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
-              <folding>
-                <element signature="e#9785#9786#0" expanded="true" />
-                <element signature="e#9817#9818#0" expanded="true" />
-                <element signature="e#9870#9871#0" expanded="true" />
-                <element signature="e#9912#9913#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -112,178 +227,63 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Helpers</find>
+      <find>setupdi</find>
+      <find>sets</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/paint/test.form" />
-        <option value="$PROJECT_DIR$/src/paint/AddCircleDialog.form" />
-        <option value="$PROJECT_DIR$/src/paint/AddCircleDialog.java" />
-        <option value="$PROJECT_DIR$/src/paint/CircleDialogs.java" />
-        <option value="$PROJECT_DIR$/src/geometry/AreaShape.java" />
-        <option value="$PROJECT_DIR$/src/paint/CircleDialog.form" />
-        <option value="$PROJECT_DIR$/src/paint/LineDialog.form" />
-        <option value="$PROJECT_DIR$/src/paint/PointDialog.form" />
-        <option value="$PROJECT_DIR$/src/paint/RectangleDialog.form" />
-        <option value="$PROJECT_DIR$/src/paint/SquareDialog.form" />
-        <option value="$PROJECT_DIR$/src/paint/IDialog.java" />
-        <option value="$PROJECT_DIR$/src/paint/PaintPanel.java" />
-        <option value="$PROJECT_DIR$/src/paint/PaintRepository.java" />
-        <option value="$PROJECT_DIR$/src/paint/IPaintView.java" />
-        <option value="$PROJECT_DIR$/src/paint/Dialog.java" />
-        <option value="$PROJECT_DIR$/src/paint/DialogConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/paint/PaintView.java" />
-        <option value="$PROJECT_DIR$/src/paint/Runner.java" />
-        <option value="$PROJECT_DIR$/src/paint/PaintController.java" />
-        <option value="$PROJECT_DIR$/src/paint/CircleDialog.java" />
-        <option value="$PROJECT_DIR$/src/paint/LineDialog.java" />
-        <option value="$PROJECT_DIR$/src/paint/PointDialog.java" />
-        <option value="$PROJECT_DIR$/src/paint/RectangleDialog.java" />
-        <option value="$PROJECT_DIR$/src/paint/SquareDialog.java" />
-        <option value="$PROJECT_DIR$/src/paint/PaintModel.java" />
-        <option value="$PROJECT_DIR$/src/paint/ICommand.java" />
-        <option value="$PROJECT_DIR$/src/paint/PaintApp.java" />
-        <option value="$PROJECT_DIR$/src/paint/command/CmdAddAllShapes.java" />
-        <option value="$PROJECT_DIR$/src/paint/dialogs/CircleDialog.java" />
-        <option value="$PROJECT_DIR$/src/paint/dialogs/LineDialog.java" />
-        <option value="$PROJECT_DIR$/src/paint/dialogs/PointDialog.java" />
-        <option value="$PROJECT_DIR$/src/paint/dialogs/RectangleDialog.java" />
-        <option value="$PROJECT_DIR$/src/paint/dialogs/SquareDialog.java" />
-        <option value="$PROJECT_DIR$/src/paint/PaintForm.form" />
-        <option value="$PROJECT_DIR$/src/paint/PaintForm.java" />
-        <option value="$PROJECT_DIR$/src/geometry/Shape.java" />
-        <option value="$PROJECT_DIR$/src/geometry/Rectangle.java" />
-        <option value="$PROJECT_DIR$/src/geometry/Point.java" />
-        <option value="$PROJECT_DIR$/src/geometry/Line.java" />
-        <option value="$PROJECT_DIR$/src/geometry/Circle.java" />
-        <option value="$PROJECT_DIR$/src/geometry/Square.java" />
-        <option value="$PROJECT_DIR$/src/paint/command/CmdAddShape.java" />
-        <option value="$PROJECT_DIR$/src/paint/command/CmdRemoveAllShapes.java" />
-        <option value="$PROJECT_DIR$/src/paint/command/CmdRemoveShape.java" />
-        <option value="$PROJECT_DIR$/src/paint/command/CmdUpdateShape.java" />
-        <option value="$PROJECT_DIR$/src/paint/command/CmdSelectShape.java" />
-        <option value="$PROJECT_DIR$/src/paint/mvc/PaintModel.java" />
-        <option value="$PROJECT_DIR$/src/paint/command/ICommand.java" />
-        <option value="$PROJECT_DIR$/src/paint/dialogs/Dialog.java" />
-        <option value="$PROJECT_DIR$/src/paint/command/CommandListRepository.java" />
-        <option value="$PROJECT_DIR$/src/paint/mvc/PaintController.java" />
-      </list>
-    </option>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="927" />
-    <option name="height" value="1055" />
-  </component>
+  <component name="ProjectId" id="1Q3HlwRWPZtnk4FJf2RLxE11FsS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="PaintApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PaintApp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PaintApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PaintApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PaintApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PaintApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="geometry" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PaintApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PaintApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="paint" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PaintApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PaintApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="paint" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PaintApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PaintApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="paint" type="462c0819:PsiDirectoryNode" />
-              <item name="dialogs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PaintApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PaintApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="paint" type="462c0819:PsiDirectoryNode" />
-              <item name="mvc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PaintApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="PaintApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="heksagon.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PaintApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="heksagon.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="hexagon" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="131" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="280" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545935876910" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553680126772" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/heksagon.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propGUI" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="paint" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="paint.helpers" />
+      <recent name="paint" />
       <recent name="paint.mvc" />
+      <recent name="strategy.importfiles" />
       <recent name="paint.command" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Katarina Grujic\Desktop\PaintApp\src\paint\dialogs" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="paint" />
       <recent name="com.intellij.uiDesigner.core" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="paint.command" />
+      <recent name="paint.strategy.exportfiles" />
+      <recent name="paint.observer" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Katarina Grujic\Desktop\PaintApp\src\paint\dialogs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -300,6 +300,7 @@
   </component>
   <component name="RunManager" selected="Application.PaintApp">
     <configuration name="PaintApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <log_file alias="log" path="$PROJECT_DIR$/../baze/log.txt" />
       <option name="MAIN_CLASS_NAME" value="paint.PaintApp" />
       <module name="PaintApp" />
       <extension name="coverage">
@@ -366,10 +367,10 @@
     </configuration>
     <list>
       <item itemvalue="Application.RectangleDialog" />
-      <item itemvalue="Application.testClass" />
+      <item itemvalue="Application.PaintApp" />
       <item itemvalue="Application.PaintForm" />
       <item itemvalue="Application.Runner" />
-      <item itemvalue="Application.PaintApp" />
+      <item itemvalue="Application.testClass" />
     </list>
     <recent_temporary>
       <list>
@@ -390,6 +391,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539955960849</updated>
+      <workItem from="1549873127570" duration="13159000" />
+      <workItem from="1549977757553" duration="15000" />
     </task>
     <task id="LOCAL-00001" summary="Adds conditionally invoke">
       <created>1542223720022</created>
@@ -440,8 +443,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543051012596</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Unod/Redo">
+      <created>1545949003669</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1545949003669</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="13174000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -452,67 +465,8 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989429" visible="true" weight="0.23021583" />
-      <window_info id="Structure" order="1" sideWeight="0.5010571" side_tool="true" weight="0.102684565" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32829374" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32397407" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.38660908" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32765958" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3323782" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32765958" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32397407" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="right" id="Maven Projects" order="6" weight="0.3295302" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.24966443" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" />
-      <window_info anchor="right" id="Maven" order="9" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989429" visible="true" weight="0.18389262" />
-      <window_info id="Structure" order="1" sideWeight="0.5010571" side_tool="true" weight="0.102684565" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32765958" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.32907802" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32884097" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3323782" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32765958" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3248227" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="right" id="Maven Projects" order="6" weight="0.3295302" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.24966443" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" />
-    </layout-to-restore>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -520,20 +474,7 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -562,308 +503,13 @@
     <MESSAGE value="Added CommandListRepository, changed CreateDialog method and added reference to Dialog Class. Added commands to commandsList." />
     <MESSAGE value="Refactored updateCmd, undo redo for commands" />
     <MESSAGE value="Fixed update undo bug, undo redo buttons disabled when there is no commands for redo or undo." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed update undo bug, undo redo buttons disabled when there is no commands for redo or undo." />
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="sh" />
-      </configuration>
-    </watches-manager>
+    <MESSAGE value="Unod/Redo" />
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/intellij/uiDesigner/core/GridConstraints.java" />
-    <entry file="file://$PROJECT_DIR$/src/paint/BtnListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/paint/test.form" />
-    <entry file="file://$PROJECT_DIR$/src/paint/test.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-11/lib/src.zip!/java.base/java/util/Objects.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-11/lib/src.zip!/java.base/jdk/internal/util/Preconditions.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-11/lib/src.zip!/java.base/java/util/ArrayList.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-11/lib/src.zip!/java.desktop/java/awt/Component.java" />
-    <entry file="file://$PROJECT_DIR$/src/paint/dialogs/PointDialog.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/dialogs/RectangleDialog.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/dialogs/SquareDialog.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/IDialog.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-11/lib/src.zip!/java.base/java/lang/Integer.java" />
-    <entry file="file://$PROJECT_DIR$/src/paint/IPaintView.java" />
-    <entry file="file://$PROJECT_DIR$/src/paint/dialogs/CircleDialog.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/command/CmdAddAllShapes.java" />
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/dialogs/LineDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="36" column="56" lean-forward="true" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/dialogs/PointDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/dialogs/RectangleDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/dialogs/SquareDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="67" column="56" lean-forward="true" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintForm.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11/lib/src.zip!/java.base/java/util/LinkedList.java" />
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/AreaShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/dialogs/DialogConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/Circle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="109" column="16" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/dialogs/CircleDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="151" column="41" lean-forward="true" selection-start-line="151" selection-start-column="41" selection-end-line="151" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11/lib/src.zip!/java.desktop/javax/swing/AbstractButton.java" />
-    <entry file="file://$PROJECT_DIR$/src/paint/dialogs/LineDialog.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/command/CmdSelectShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#377#378#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/command/CmdRemoveAllShapes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/command/CmdRemoveShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/dialogs/Dialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="61" column="48" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/command/ICommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-11-oracle/lib/src.zip!/java.desktop/java/awt/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="2393" column="9" lean-forward="true" selection-start-line="2393" selection-start-column="9" selection-end-line="2393" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-11-oracle/lib/src.zip!/java.desktop/java/awt/Container.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="1611" selection-start-line="1611" selection-end-line="1611" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-11-oracle/lib/src.zip!/java.desktop/javax/swing/AbstractButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="2307" selection-start-line="2307" selection-end-line="2307" />
-          <folding>
-            <element signature="e#83030#83031#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/command/CmdAddShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#495#496#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="130" selection-start-line="130" selection-end-line="130" />
-          <folding>
-            <element signature="e#3044#3045#0" expanded="true" />
-            <element signature="e#3126#3127#0" expanded="true" />
-            <element signature="e#3150#3151#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/Line.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/mvc/PaintView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/command/CmdUpdateShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/heksagon.jar!/hexagon/TestHexagon.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/Rectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/Square.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="131" column="65" lean-forward="true" selection-start-line="131" selection-start-column="65" selection-end-line="131" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-            <element signature="e#1042#1043#0" expanded="true" />
-            <element signature="e#1091#1092#0" expanded="true" />
-            <element signature="e#1128#1129#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/heksagon.jar!/hexagon/Hexagon.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/mvc/PaintModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#2306#2307#0" expanded="true" />
-            <element signature="e#2335#2336#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/mvc/PaintController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="e#9785#9786#0" expanded="true" />
-            <element signature="e#9817#9818#0" expanded="true" />
-            <element signature="e#9870#9871#0" expanded="true" />
-            <element signature="e#9912#9913#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/command/CommandListRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

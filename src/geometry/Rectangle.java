@@ -8,7 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Rectangle extends Square {
-
+    private static final long serialVersionUID = 5510713369353881462L;
     private int sideWidth;
 
     public Rectangle() {
@@ -97,7 +97,7 @@ public class Rectangle extends Square {
     }
 
     @Override
-    public <T extends JDialog> T createDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
+    public <T extends JDialog> T createDialogForUpdate(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
         RectangleDialog rectDialog = new RectangleDialog(isUpdate,oldShape, paintModel,commandListRepository);
         return (T) rectDialog;
     }
@@ -110,6 +110,7 @@ public class Rectangle extends Square {
             this.setSideWidth(tmpRectangle.getSideWidth());
             this.setInsideColor(tmpRectangle.getInsideColor());
             this.setOutlineColor(tmpRectangle.getOutlineColor());
+            this.setSelected(tmpRectangle.isSelected());
 
     }
     public Shape cloneInstance() {
@@ -119,6 +120,7 @@ public class Rectangle extends Square {
             originalRectangle.setSideWidth(this.getSideWidth());
             originalRectangle.setInsideColor(this.getInsideColor());
             originalRectangle.setOutlineColor(this.getOutlineColor());
+            originalRectangle.setSelected(this.isSelected());
 
         return originalRectangle;
     }

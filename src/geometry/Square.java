@@ -8,7 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Square extends AreaShape implements IMovable {
-
+    private static final long serialVersionUID = 5510713369353881462L;
     protected Point upLeft;
     protected int sideLength;
 
@@ -108,7 +108,7 @@ public class Square extends AreaShape implements IMovable {
     }
 
     @Override
-    public <T extends JDialog> T createDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
+    public <T extends JDialog> T createDialogForUpdate(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
         SquareDialog sqrDialog = new SquareDialog(isUpdate,oldShape, paintModel,commandListRepository);
         return (T) sqrDialog;
 
@@ -121,16 +121,18 @@ public class Square extends AreaShape implements IMovable {
             this.setSideLength(tmpSquare.getSideLength());
             this.setInsideColor(tmpSquare.getInsideColor());
             this.setOutlineColor(tmpSquare.getOutlineColor());
-
+            this.setSelected(tmpSquare.isSelected());
     }
 
     @Override
     public Shape cloneInstance() {
+
         Square originalSquare = new Square();
             originalSquare.setUpLeft(this.getUpLeft());
             originalSquare.setSideLength(this.getSideLength());
             originalSquare.setInsideColor(this.getInsideColor());
             originalSquare.setOutlineColor(this.getOutlineColor());
+            originalSquare.setSelected(this.isSelected());
 
         return originalSquare;
     }

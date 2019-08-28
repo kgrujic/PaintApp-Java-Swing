@@ -14,13 +14,16 @@ public class RectangleDialog extends Dialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
+
     private JFormattedTextField txtboxWidth;
     private JFormattedTextField txtboxHeight;
-    private JLabel lblWidth;
     private JFormattedTextField txtboxULY;
     private JFormattedTextField txtboxULX;
+
+    private JLabel lblWidth;
     private JLabel lblULX;
     private JLabel lblULY;
+
     private JButton btnOutlineColor;
     private JButton btnInsideColor;
 
@@ -32,6 +35,11 @@ public class RectangleDialog extends Dialog {
 
 
     public RectangleDialog() {
+
+        buttonOK.setEnabled(false);
+        dialogInputValidation(txtboxHeight, buttonOK);
+        dialogInputValidation(txtboxWidth, buttonOK);
+
         setupContentPane(contentPane, buttonOK);
         setVisibilityToFalse();
 
@@ -63,13 +71,18 @@ public class RectangleDialog extends Dialog {
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
 
-        setupDialog(dialogConfiguration);
+        setupDialogCreate(dialogConfiguration, "Rectangle");
     }
 
     public RectangleDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
 
         setArgumentsForUpdate(isUpdate, oldShape, paintModel);
         setCommandListRepository(commandListRepository);
+
+        dialogInputValidation(txtboxHeight, buttonOK);
+        dialogInputValidation(txtboxWidth, buttonOK);
+        dialogInputValidation(txtboxULX, buttonOK);
+        dialogInputValidation(txtboxULY, buttonOK);
 
         oldRectangle = (Rectangle) oldShape;
 
@@ -107,7 +120,7 @@ public class RectangleDialog extends Dialog {
                 }
             }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
 
-            setupDialog(dialogConfiguration);
+            setupDialogUpdate(dialogConfiguration, "Rectangle");
         }
     }
 
@@ -140,17 +153,17 @@ public class RectangleDialog extends Dialog {
         // add your code here
         if (isUpdate) {
 
-            newRectangle = new Rectangle(new Point(Integer.parseInt(txtboxULX.getText()), Integer.parseInt(txtboxULY.getText())),
-                    Integer.parseInt(txtboxHeight.getText()),
-                    Integer.parseInt(txtboxWidth.getText()),
+            newRectangle = new Rectangle(new Point(Integer.parseInt(txtboxULX.getText().trim()), Integer.parseInt(txtboxULY.getText().trim())),
+                    Integer.parseInt(txtboxHeight.getText().trim()),
+                    Integer.parseInt(txtboxWidth.getText().trim()),
                     outlineColor, insideColor);
 
-            //paintModel.update(oldRectangle, newRectangle);
+            newRectangle.setSelected(oldRectangle.isSelected());
             Update(oldRectangle, newRectangle);
 
         } else {
-            width = Integer.parseInt(txtboxWidth.getText());
-            height = Integer.parseInt(txtboxHeight.getText());
+            width = Integer.parseInt(txtboxWidth.getText().trim());
+            height = Integer.parseInt(txtboxHeight.getText().trim());
             readyToAdd = true;
         }
         dispose();
@@ -259,4 +272,5 @@ public class RectangleDialog extends Dialog {
     public JComponent $$$getRootComponent$$$() {
         return contentPane;
     }
+
 }

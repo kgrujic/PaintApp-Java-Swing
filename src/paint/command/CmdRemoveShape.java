@@ -1,17 +1,21 @@
 package paint.command;
 
-import geometry.Shape;
+import geometry.*;
+import paint.log.Helpers;
 import paint.mvc.PaintModel;
 
-public class CmdRemoveShape implements ICommand, Cloneable{
+public class CmdRemoveShape implements ICommand, Cloneable {
 
     private PaintModel model;
     private Shape shape;
+    private Helpers helper;
 
     public CmdRemoveShape(PaintModel model, Shape shape) {
         this.model = model;
         this.shape = shape;
+        helper = new Helpers();
     }
+
     @Override
     public void execute() {
         model.remove(shape);
@@ -22,14 +26,5 @@ public class CmdRemoveShape implements ICommand, Cloneable{
         model.add(shape);
     }
 
-    @Override
-    public CmdRemoveShape clone() {
-        try {
-            return (CmdRemoveShape) super.clone();
-        } catch (CloneNotSupportedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return null;
-    }
+
 }

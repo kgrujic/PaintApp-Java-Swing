@@ -9,6 +9,7 @@ import java.awt.*;
 
 public class Circle extends AreaShape implements IMovable{
 
+    private static final long serialVersionUID = 5510713369353881462L;
     private Point center;
     private int r;
 
@@ -77,9 +78,9 @@ public class Circle extends AreaShape implements IMovable{
     public void draw(Graphics g) {
         g.setColor(getOutlineColor());
         g.drawOval(center.getX() - r, center.getY() - r, 2 * r, r * 2);
+        fill(g);
         if (isSelected())
             selected(g);
-        fill(g);
     }
 
     @Override
@@ -99,7 +100,7 @@ public class Circle extends AreaShape implements IMovable{
     }
 
     @Override
-    public <T extends JDialog> T createDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
+    public <T extends JDialog> T createDialogForUpdate(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
         CircleDialog crcDialog = new CircleDialog(isUpdate,oldShape, paintModel, commandListRepository);
         return (T) crcDialog;
     }
@@ -113,6 +114,8 @@ public class Circle extends AreaShape implements IMovable{
             this.setR(tmpCircle.getR());
             this.setInsideColor(tmpCircle.getInsideColor());
             this.setOutlineColor(tmpCircle.getOutlineColor());
+            this.setSelected(tmpCircle.isSelected());
+
     }
 
     @Override
@@ -122,6 +125,7 @@ public class Circle extends AreaShape implements IMovable{
             originalCircle.setR(this.getR());
             originalCircle.setInsideColor(this.getInsideColor());
             originalCircle.setOutlineColor(this.getOutlineColor());
+            originalCircle.setSelected(this.isSelected());
 
         return originalCircle;
     }

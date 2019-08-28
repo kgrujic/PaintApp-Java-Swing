@@ -9,7 +9,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class Point extends Shape implements IMovable{
-
+    private static final long serialVersionUID = 5510713369353881462L;
     private int x;
     private int y;
 
@@ -38,7 +38,7 @@ public class Point extends Shape implements IMovable{
 
     @Override
     public String toString() {
-        return getClass().getName() + "(" + this.x + ", " + this.y + ")";
+        return "Point" + "(" + this.x + "," + this.y + ")";
     }
 
     @Override
@@ -102,7 +102,7 @@ public class Point extends Shape implements IMovable{
     }
 
     @Override
-    public <T extends JDialog> T createDialog(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
+    public <T extends JDialog> T createDialogForUpdate(boolean isUpdate, Shape oldShape, PaintModel paintModel, CommandListRepository commandListRepository) {
         PointDialog pointDialog = new PointDialog(isUpdate,oldShape, paintModel,commandListRepository);
         return (T) pointDialog;
     }
@@ -113,7 +113,7 @@ public class Point extends Shape implements IMovable{
             this.setX(tmpPoint.getX());
             this.setY(tmpPoint.getY());
             this.setOutlineColor(tmpPoint.getOutlineColor());
-
+            this.setSelected(tmpPoint.isSelected());
     }
 
     @Override
@@ -122,7 +122,7 @@ public class Point extends Shape implements IMovable{
             originalPoint.setX(this.getX());
             originalPoint.setY(this.getY());
             originalPoint.setOutlineColor(this.getOutlineColor());
-
+            originalPoint.setSelected(this.isSelected());
         return originalPoint;
     }
 
